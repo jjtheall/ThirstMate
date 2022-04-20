@@ -73,7 +73,6 @@ public class ShoppingListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_shopping_list, container, false);
 
         List<Ingredient> ingredients = new LinkedList<>();
-        //ingredients.add("Code It");
 
         RecyclerView recyclerView = view.findViewById(R.id.recycleViewShopping);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
