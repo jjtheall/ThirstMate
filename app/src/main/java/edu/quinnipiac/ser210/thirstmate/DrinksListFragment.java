@@ -3,11 +3,16 @@ package edu.quinnipiac.ser210.thirstmate;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +29,8 @@ public class DrinksListFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private int counter = 0;
 
     public DrinksListFragment() {
         // Required empty public constructor
@@ -60,7 +67,22 @@ public class DrinksListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_drinks_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_drinks_list, container, false);
+
+        List<Drink> drinks = new LinkedList<>();
+
+        RecyclerView recyclerView = view.findViewById(R.id.recycleViewDrinks);
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        DrinksAdapter adapter = new DrinksAdapter(drinks);
+        recyclerView.setAdapter(adapter);
+
+        for(int i = 0; i < Drink.drinks.length; i++){
+            drinks.add(Drink.drinks[i]);
+            adapter.notifyItemInserted(drinks.size()-1);
+        }
+
+        return view;
     }
 }
