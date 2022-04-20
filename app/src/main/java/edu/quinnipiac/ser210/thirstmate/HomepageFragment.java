@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ public class HomepageFragment extends Fragment {
 
     public HomepageFragment() {
         // Required empty public constructor
+        Log.d("help","inside homepageFragment constructor");
     }
 
     /**

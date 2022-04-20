@@ -3,4 +3,8 @@
     <string name="splash_text">Please drink responsibly. If you are in the US, by pressing the button below, you are confirming that you are at least 21 years of age.</string>
     <string name="splash_button">I am 21+</string>
     <string name="hello_blank_fragment">fuck you</string>
+    <string name="home_tab">Home</string>
+    <string name="drinks_tab">Drinks</string>
+    <string name="shopping_tab">Shopping</string>
+    <string name="create_drink_tab">Create</string>
 </resources>
