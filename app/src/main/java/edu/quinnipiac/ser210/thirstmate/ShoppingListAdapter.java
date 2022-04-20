@@ -12,10 +12,10 @@ import java.util.List;
 
 public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListVH>{
 
-    List<String> items;
+    List<Ingredient> ingredients;
 
-    public ShoppingListAdapter(List<String> items){
-        this.items = items;
+    public ShoppingListAdapter(List<Ingredient> ingredients){
+        this.ingredients = ingredients;
     }
     @NonNull
     @Override
@@ -26,26 +26,29 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListVH>{
 
     @Override
     public void onBindViewHolder(@NonNull ShoppingListVH holder, int position) {
-        holder.textView.setText(items.get(position));
+        holder.nameText.setText(ingredients.get(position).getName());
+        if(ingredients.get(position).getQuantity() != 0){ holder.quantityText.setText("" + ingredients.get(position).getQuantity()); }
     }
 
     @Override
     public int getItemCount() {
-        return items.size();
+        return ingredients.size();
     }
 }
 
 class ShoppingListVH extends RecyclerView.ViewHolder{
 
-    TextView textView;
+    TextView nameText;
+    TextView quantityText;
     private ShoppingListAdapter adapter;
 
     public ShoppingListVH(@NonNull View itemView){
         super(itemView);
 
-        textView = itemView.findViewById(R.id.ingredient);
+        nameText = itemView.findViewById(R.id.ingredientName);
+        quantityText = itemView.findViewById(R.id.ingredientQuantity);
         itemView.findViewById(R.id.deleteIngredient).setOnClickListener(view -> {
-            adapter.items.remove(getAdapterPosition());
+            adapter.ingredients.remove(getAdapterPosition());
             adapter.notifyItemRemoved(getAdapterPosition());
         });
     }

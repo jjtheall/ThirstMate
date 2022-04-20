@@ -4,7 +4,6 @@
     <string name="splash_button">I am 21+</string>
     <string name="hello_blank_fragment">fuck you</string>
     <string name="add_ingredient_button">ADD INGREDIENT</string>
-    <string name="ingredient_name">Some ingredient</string>
     <string name="delete_ingredient">DELETE</string>
     <string name="home_tab">Home</string>
     <string name="drinks_tab">Drinks</string>
