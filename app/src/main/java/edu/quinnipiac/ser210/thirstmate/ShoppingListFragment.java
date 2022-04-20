@@ -30,8 +30,7 @@ public class ShoppingListFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    String[] data = {"Vodka", "Ginger Beer", "Lime Juice", "Simple Syrup", "Ice"};
-    int counter = 0;
+    private int counter = 0;
 
     public ShoppingListFragment() {
         // Required empty public constructor
@@ -73,8 +72,8 @@ public class ShoppingListFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_shopping_list, container, false);
 
-        List<String> ingredients = new LinkedList<>();
-        ingredients.add("Code It");
+        List<Ingredient> ingredients = new LinkedList<>();
+        //ingredients.add("Code It");
 
         RecyclerView recyclerView = view.findViewById(R.id.recycleViewShopping);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
@@ -82,7 +81,7 @@ public class ShoppingListFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         view.findViewById(R.id.addIngredient).setOnClickListener(view1 -> {
-            ingredients.add(data[counter%5]);
+            ingredients.add(Ingredient.data[counter%5]);
             counter++;
             adapter.notifyItemInserted(ingredients.size()-1);
         });
