@@ -3,23 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/splashFragment">
-
-    <fragment
-        android:id="@+id/splashFragment"
-        android:name="edu.quinnipiac.ser210.thirstmate.SplashFragment"
-        android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
-        <action
-            android:id="@+id/action_splashFragment_to_homepageFragment"
-            app:destination="@id/homepageFragment" />
-        <action
-            android:id="@+id/action_splashFragment_to_infoFragment"
-            app:destination="@id/infoFragment" />
-        <action
-            android:id="@+id/action_splashFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-    </fragment>
+    app:startDestination="@id/homepageFragment">
     <fragment
         android:id="@+id/homepageFragment"
         android:name="edu.quinnipiac.ser210.thirstmate.HomepageFragment"
@@ -29,14 +13,11 @@
             android:id="@+id/action_homepageFragment_to_drinksListFragment"
             app:destination="@id/drinksListFragment" />
         <action
-            android:id="@+id/action_homepageFragment_to_drinkViewFragment"
-            app:destination="@id/drinkViewFragment" />
+            android:id="@+id/action_homepageFragment_to_shoppingListFragment"
+            app:destination="@id/shoppingListFragment" />
         <action
-            android:id="@+id/action_homepageFragment_to_infoFragment"
-            app:destination="@id/infoFragment" />
-        <action
-            android:id="@+id/action_homepageFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            android:id="@+id/action_homepageFragment_to_createDrinkFragment"
+            app:destination="@id/createDrinkFragment" />
     </fragment>
     <fragment
         android:id="@+id/drinksListFragment"
@@ -44,20 +25,14 @@
         android:label="fragment_drinks_list"
         tools:layout="@layout/fragment_drinks_list" >
         <action
+            android:id="@+id/action_drinksListFragment_to_homepageFragment"
+            app:destination="@id/homepageFragment" />
+        <action
             android:id="@+id/action_drinksListFragment_to_shoppingListFragment"
             app:destination="@id/shoppingListFragment" />
         <action
             android:id="@+id/action_drinksListFragment_to_createDrinkFragment"
             app:destination="@id/createDrinkFragment" />
-        <action
-            android:id="@+id/action_drinksListFragment_to_drinkViewFragment"
-            app:destination="@id/drinkViewFragment" />
-        <action
-            android:id="@+id/action_drinksListFragment_to_infoFragment"
-            app:destination="@id/infoFragment" />
-        <action
-            android:id="@+id/action_drinksListFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/shoppingListFragment"
@@ -65,14 +40,14 @@
         android:label="fragment_shopping_list"
         tools:layout="@layout/fragment_shopping_list" >
         <action
+            android:id="@+id/action_shoppingListFragment_to_homepageFragment"
+            app:destination="@id/homepageFragment" />
+        <action
             android:id="@+id/action_shoppingListFragment_to_drinksListFragment"
             app:destination="@id/drinksListFragment" />
         <action
-            android:id="@+id/action_shoppingListFragment_to_infoFragment"
-            app:destination="@id/infoFragment" />
-        <action
-            android:id="@+id/action_shoppingListFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            android:id="@+id/action_shoppingListFragment_to_createDrinkFragment"
+            app:destination="@id/createDrinkFragment" />
     </fragment>
     <fragment
         android:id="@+id/createDrinkFragment"
@@ -80,43 +55,13 @@
         android:label="fragment_create_drink"
         tools:layout="@layout/fragment_create_drink" >
         <action
-            android:id="@+id/action_createDrinkFragment_to_infoFragment"
-            app:destination="@id/infoFragment" />
-        <action
             android:id="@+id/action_createDrinkFragment_to_drinksListFragment"
             app:destination="@id/drinksListFragment" />
         <action
-            android:id="@+id/action_createDrinkFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/drinkViewFragment"
-        android:name="edu.quinnipiac.ser210.thirstmate.DrinkViewFragment"
-        android:label="fragment_drink_view"
-        tools:layout="@layout/fragment_drink_view" >
+            android:id="@+id/action_createDrinkFragment_to_homepageFragment"
+            app:destination="@id/homepageFragment" />
         <action
-            android:id="@+id/action_drinkViewFragment_to_infoFragment"
-            app:destination="@id/infoFragment" />
-        <action
-            android:id="@+id/action_drinkViewFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/infoFragment"
-        android:name="edu.quinnipiac.ser210.thirstmate.InfoFragment"
-        android:label="fragment_info"
-        tools:layout="@layout/fragment_info" >
-        <action
-            android:id="@+id/action_infoFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/settingsFragment"
-        android:name="edu.quinnipiac.ser210.thirstmate.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" >
-        <action
-            android:id="@+id/action_settingsFragment_to_infoFragment"
-            app:destination="@id/infoFragment" />
+            android:id="@+id/action_createDrinkFragment_to_shoppingListFragment"
+            app:destination="@id/shoppingListFragment" />
     </fragment>
 </navigation>
