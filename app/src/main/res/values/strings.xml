@@ -6,4 +6,8 @@
     <string name="add_ingredient_button">ADD INGREDIENT</string>
     <string name="ingredient_name">Some ingredient</string>
     <string name="delete_ingredient">DELETE</string>
+    <string name="home_tab">Home</string>
+    <string name="drinks_tab">Drinks</string>
+    <string name="shopping_tab">Shopping</string>
+    <string name="create_drink_tab">Create</string>
 </resources>
