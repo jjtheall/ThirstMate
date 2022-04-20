@@ -4,6 +4,16 @@ public class Drink {
 
     private String name;
     private Ingredient[] ingredients;
+    private int imageResourceId;
+
+    public static Drink[] drinks = {
+            new Drink("Rum and Coke"),
+            new Drink("Blue Hawaiian"),
+            new Drink("Vodka Cranberry"),
+            new Drink("Vodka Sour"),
+            new Drink("Tequila Sunrise"),
+            new Drink("Margarita")
+    };
 
     public Drink(String name){
         this.name = name;
@@ -14,9 +24,10 @@ public class Drink {
         };
     }
 
-    public Drink(String name, Ingredient[] ingredients){
+    public Drink(String name, Ingredient[] ingredients, int imageResourceId){
         this.name = name;
         this.ingredients = ingredients;
+        this.imageResourceId = imageResourceId;
     }
 
     public String getName(){
@@ -31,11 +42,19 @@ public class Drink {
         return this.ingredients[index];
     }
 
+    public int getImageResourceId(){
+        return this.imageResourceId;
+    }
+
     public void setName(String name){
         this.name = name;
     }
 
     public void setIngredients(Ingredient[] ingredients){
         this.ingredients = ingredients;
+    }
+
+    public String toString(){
+        return this.name;
     }
 }
