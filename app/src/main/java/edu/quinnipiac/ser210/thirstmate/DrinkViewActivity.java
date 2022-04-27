@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DrinkViewActivity extends AppCompatActivity {
 
@@ -24,6 +25,8 @@ public class DrinkViewActivity extends AppCompatActivity {
     public static final String EXTRA_IMGRESID = "imageResourceId";
     public static final String EXTRA_INGNAME = "ing";
     public static final String EXTRA_INGAMT = "ingamt";
+
+    private String drinkName;
 
     private String ing1Name = "";
     private String ing2Name = "";
@@ -67,7 +70,7 @@ public class DrinkViewActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
-        String drinkName = intent.getStringExtra(EXTRA_DRINKNAME);
+        drinkName = intent.getStringExtra(EXTRA_DRINKNAME);
         TextView drinkNameTextView = (TextView) findViewById(R.id.name);
         drinkNameTextView.setText(drinkName);
 
@@ -391,5 +394,7 @@ public class DrinkViewActivity extends AppCompatActivity {
             Ingredient ing15 = new Ingredient(ing15Name,curNum * ing15Amt);
             ShoppingListFragment.ingredientsShopping.add(ing15);
         }
+        Toast toast = Toast.makeText(this, "Ingredients for " + drinkName + " were added to your shopping list",Toast.LENGTH_SHORT);
+        toast.show();
     }
 }
