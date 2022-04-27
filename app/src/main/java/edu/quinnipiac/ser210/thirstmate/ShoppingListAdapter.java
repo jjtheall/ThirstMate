@@ -8,12 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListVH>{
 
     List<Ingredient> ingredients;
-    ShoppingListVH holder;
+    List<ShoppingListVH> holders = new LinkedList<>();
 
     public ShoppingListAdapter(List<Ingredient> ingredients){
         this.ingredients = ingredients;
@@ -27,7 +28,7 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListVH>{
 
     @Override
     public void onBindViewHolder(@NonNull ShoppingListVH holder, int position) {
-        this.holder = holder;
+        holders.add(holder);
         holder.nameText.setText(ingredients.get(position).getName());
         if(ingredients.get(position).getQuantity() != 0){ holder.quantityText.setText("" + ingredients.get(position).getQuantity()); }
     }
@@ -39,8 +40,10 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListVH>{
 
     public void clearIngredients(){
        ingredients.clear();
-       holder.nameText.setText("");
-       holder.quantityText.setText("");
+       for (int i = 0; i < holders.size(); i++) {
+           holders.get(i).nameText.setText("");
+           holders.get(i).quantityText.setText("");
+       }
     }
 
 }
