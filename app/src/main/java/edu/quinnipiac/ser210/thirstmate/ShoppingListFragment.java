@@ -86,6 +86,13 @@ public class ShoppingListFragment extends Fragment {
         ShoppingListAdapter adapter = new ShoppingListAdapter(ingredients);
         recyclerView.setAdapter(adapter);
 
+        for(int i=0; i<ingredientsShopping.size();i++){
+            ingredients.add(ingredientsShopping.get(i));
+            adapter.notifyItemInserted(ingredients.size() - 1);
+        }
+
+        counter = ingredientsShopping.size();
+
         view.findViewById(R.id.addIngredient).setOnClickListener(view1 -> {
             AddIngredientDialog addIngredientDialog = new AddIngredientDialog();
             addIngredientDialog.setIngredients(ingredients);

@@ -18,6 +18,8 @@ public class DrinkViewActivity extends AppCompatActivity {
 
     private ShareActionProvider shareActionProvider;
 
+    private int curNum = 0;
+
     public static final String EXTRA_DRINKNAME = "drinkID";
     public static final String EXTRA_IMGRESID = "imageResourceId";
     public static final String EXTRA_INGNAME = "ing";
@@ -38,6 +40,23 @@ public class DrinkViewActivity extends AppCompatActivity {
     private String ing13Name = "";
     private String ing14Name = "";
     private String ing15Name = "";
+
+    private double ing1Amt;
+    private double ing2Amt;
+    private double ing3Amt;
+    private double ing4Amt;
+    private double ing5Amt;
+    private double ing6Amt;
+    private double ing7Amt;
+    private double ing8Amt;
+    private double ing9Amt;
+    private double ing10Amt;
+    private double ing11Amt;
+    private double ing12Amt;
+    private double ing13Amt;
+    private double ing14Amt;
+    private double ing15Amt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,77 +79,77 @@ public class DrinkViewActivity extends AppCompatActivity {
         if(intent.getStringExtra(EXTRA_INGNAME + "0") != null){
             ing1Name = intent.getStringExtra(EXTRA_INGNAME + "0");
         }
-        double ing1Amt = intent.getDoubleExtra(EXTRA_INGAMT + "0",0);
+        ing1Amt = intent.getDoubleExtra(EXTRA_INGAMT + "0",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "1") != null){
             ing2Name = intent.getStringExtra(EXTRA_INGNAME + "1");
         }
-        double ing2Amt = intent.getDoubleExtra(EXTRA_INGAMT + "1",0);
+        ing2Amt = intent.getDoubleExtra(EXTRA_INGAMT + "1",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "2") != null){
             ing3Name = intent.getStringExtra(EXTRA_INGNAME + "2");
         }
-        double ing3Amt = intent.getDoubleExtra(EXTRA_INGAMT + "2",0);
+        ing3Amt = intent.getDoubleExtra(EXTRA_INGAMT + "2",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "3") != null){
             ing4Name = intent.getStringExtra(EXTRA_INGNAME + "3");
         }
-        double ing4Amt = intent.getDoubleExtra(EXTRA_INGAMT + "3",0);
+        ing4Amt = intent.getDoubleExtra(EXTRA_INGAMT + "3",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "4") != null){
             ing5Name = intent.getStringExtra(EXTRA_INGNAME + "4");
         }
-        double ing5Amt = intent.getDoubleExtra(EXTRA_INGAMT + "4",0);
+        ing5Amt = intent.getDoubleExtra(EXTRA_INGAMT + "4",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "5") != null){
             ing6Name = intent.getStringExtra(EXTRA_INGNAME + "5");
         }
-        double ing6Amt = intent.getDoubleExtra(EXTRA_INGAMT + "5",0);
+        ing6Amt = intent.getDoubleExtra(EXTRA_INGAMT + "5",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "6") != null){
             ing7Name = intent.getStringExtra(EXTRA_INGNAME + "6");
         }
-        double ing7Amt = intent.getDoubleExtra(EXTRA_INGAMT + "6",0);
+        ing7Amt = intent.getDoubleExtra(EXTRA_INGAMT + "6",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "7") != null){
             ing8Name = intent.getStringExtra(EXTRA_INGNAME + "7");
         }
-        double ing8Amt = intent.getDoubleExtra(EXTRA_INGAMT + "7",0);
+        ing8Amt = intent.getDoubleExtra(EXTRA_INGAMT + "7",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "8") != null){
             ing9Name = intent.getStringExtra(EXTRA_INGNAME + "8");
         }
-        double ing9Amt = intent.getDoubleExtra(EXTRA_INGAMT + "8", 0);
+        ing9Amt = intent.getDoubleExtra(EXTRA_INGAMT + "8", 0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "9") != null){
             ing10Name = intent.getStringExtra(EXTRA_INGNAME + "9");
         }
-        double ing10Amt = intent.getDoubleExtra(EXTRA_INGAMT + "9",0);
+        ing10Amt = intent.getDoubleExtra(EXTRA_INGAMT + "9",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "10") != null){
             ing11Name = intent.getStringExtra(EXTRA_INGNAME + "10");
         }
-        double ing11Amt = intent.getDoubleExtra(EXTRA_INGAMT + "10",0);
+        ing11Amt = intent.getDoubleExtra(EXTRA_INGAMT + "10",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "11") != null){
             ing12Name = intent.getStringExtra(EXTRA_INGNAME + "11");
         }
-        double ing12Amt = intent.getDoubleExtra(EXTRA_INGAMT + "11",0);
+        ing12Amt = intent.getDoubleExtra(EXTRA_INGAMT + "11",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "12") != null){
             ing13Name = intent.getStringExtra(EXTRA_INGNAME + "12");
         }
-        double ing13Amt = intent.getDoubleExtra(EXTRA_INGAMT + "12",0);
+        ing13Amt = intent.getDoubleExtra(EXTRA_INGAMT + "12",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "13") != null){
             ing14Name = intent.getStringExtra(EXTRA_INGNAME + "13");
         }
-        double ing14Amt = intent.getDoubleExtra(EXTRA_INGAMT + "13",0);
+        ing14Amt = intent.getDoubleExtra(EXTRA_INGAMT + "13",0);
 
         if(intent.getStringExtra(EXTRA_INGNAME + "14") != null){
             ing15Name = intent.getStringExtra(EXTRA_INGNAME + "14");
         }
-        double ing15Amt = intent.getDoubleExtra(EXTRA_INGAMT + "14",0);
+        ing15Amt = intent.getDoubleExtra(EXTRA_INGAMT + "14",0);
 
 
         TextView ing1TextView = (TextView)findViewById(R.id.ing1);
@@ -296,19 +315,81 @@ public class DrinkViewActivity extends AppCompatActivity {
 
     public void onSubtractDrinkQuantity(View view){
         TextView drinkQuantity = (TextView) findViewById(R.id.drink_quantity);
-        int curNum = Integer.parseInt(String.valueOf(drinkQuantity.getText()));
+        curNum = Integer.parseInt(String.valueOf(drinkQuantity.getText()));
         if(curNum > 0){
             drinkQuantity.setText("" + (curNum-1));
+            curNum--;
         }
+
     }
 
     public void onAddDrinkQuantity(View view) {
         TextView drinkQuantity = (TextView) findViewById(R.id.drink_quantity);
-        int curNum = Integer.parseInt(String.valueOf(drinkQuantity.getText()));
+        curNum = Integer.parseInt(String.valueOf(drinkQuantity.getText()));
         drinkQuantity.setText("" + (curNum+1));
+        curNum++;
     }
 
     public void onAddIngredients(View view){
-
+        if(!ing1Name.equals("")){
+            Ingredient ing1 = new Ingredient(ing1Name,curNum * ing1Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing1);
+        }
+        if(!ing2Name.equals("")){
+            Ingredient ing2 = new Ingredient(ing2Name,curNum * ing2Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing2);
+        }
+        if(!ing3Name.equals("")){
+            Ingredient ing3 = new Ingredient(ing3Name,curNum * ing3Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing3);
+        }
+        if(!ing4Name.equals("")){
+            Ingredient ing4 = new Ingredient(ing4Name,curNum * ing4Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing4);
+        }
+        if(!ing5Name.equals("")){
+            Ingredient ing5 = new Ingredient(ing5Name,curNum * ing5Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing5);
+        }
+        if(!ing6Name.equals("")){
+            Ingredient ing6 = new Ingredient(ing6Name,curNum * ing6Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing6);
+        }
+        if(!ing7Name.equals("")){
+            Ingredient ing7 = new Ingredient(ing7Name,curNum * ing7Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing7);
+        }
+        if(!ing8Name.equals("")){
+            Ingredient ing8 = new Ingredient(ing8Name,curNum * ing8Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing8);
+        }
+        if(!ing9Name.equals("")){
+            Ingredient ing9 = new Ingredient(ing9Name,curNum * ing9Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing9);
+        }
+        if(!ing10Name.equals("")){
+            Ingredient ing10 = new Ingredient(ing10Name,curNum * ing10Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing10);
+        }
+        if(!ing11Name.equals("")){
+            Ingredient ing11 = new Ingredient(ing11Name,curNum * ing11Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing11);
+        }
+        if(!ing12Name.equals("")){
+            Ingredient ing12 = new Ingredient(ing12Name,curNum * ing12Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing12);
+        }
+        if(!ing13Name.equals("")){
+            Ingredient ing13 = new Ingredient(ing13Name,curNum * ing13Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing13);
+        }
+        if(!ing14Name.equals("")){
+            Ingredient ing14 = new Ingredient(ing14Name,curNum * ing14Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing14);
+        }
+        if(!ing15Name.equals("")){
+            Ingredient ing15 = new Ingredient(ing15Name,curNum * ing15Amt);
+            ShoppingListFragment.ingredientsShopping.add(ing15);
+        }
     }
 }
