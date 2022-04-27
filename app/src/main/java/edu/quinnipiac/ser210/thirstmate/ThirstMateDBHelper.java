@@ -104,12 +104,39 @@ public class ThirstMateDBHelper extends SQLiteOpenHelper {
                     "ING15 TEXT, " +
                     "ING15AMT REAL) ;"
             );
-            //insertDrink(db,"Rum and Coke");
-            //insertDrink(db,"Blue Hawaiian");
-            //insertDrink(db,"Vodka Cranberry");
-            //insertDrink(db,"Vodka Sour");
-            //insertDrink(db,"Tequila Sunrise");
-            //insertDrink(db,"Margarita");
+
+            insertDrink(db,"Rum and Coke",R.drawable.cocktail,"Rum",45.0,"Coke",
+                    90.0,"Ice",0.0,null,0.0,null,0.0,
+                    null,0.0,null,0.0,null,0.0,null,
+                    0.0,null,0.0,null,0.0,null,0.0,
+                    null,0.0,null,0.0,null,0.0);
+            insertDrink(db,"Blue Hawaiian",R.drawable.cocktail,"Rum",30.0,
+                    "Blue Curacao",15.0,"Coconut Cream",15.0,"Pineapple Juice",
+                    60.0,"Ice",0.0,null,0.0,null,0.0,
+                    null,0.0,null,0.0,null,0.0,null,
+                    0.0,null,0.0,null,0.0,null,0.0,
+                    null,0.0);
+            insertDrink(db,"Vodka Cranberry",R.drawable.cocktail,"Vodka",60.0,
+                    "Cranberry Juice",90.0,"Ice",0.0,null,0.0,
+                    null,0.0,null,0.0,null,0.0,null,
+                    0.0,null,0.0,null,0.0,null,0.0,
+                    null,0.0,null,0.0,null,0.0,null,0.0);
+            insertDrink(db,"Bay Breeze",R.drawable.cocktail,"Vodka",60.0,
+                    "Cranberry Juice",90.0,"Pineapple Juice",90.0,"Ice",
+                    0.0,null,0.0,null,0.0,null,0.0,
+                    null,0.0,null,0.0,null,0.0,null,
+                    0.0,null,0.0,null,0.0,null,0.0,
+                    null,0.0);
+            insertDrink(db,"Tequila Sunrise",R.drawable.cocktail,"Tequila",45.0,
+                    "Orange Juice",90.0,"Grenadine",15.0,"Ice",0.0,
+                    null,0.0,null,0.0,null,0.0,null,0.0,
+                    null,0.0,null,0.0,null,0.0,null,
+                    0.0,null,0.0,null,0.0,null,0.0);
+            insertDrink(db,"Margarita",R.drawable.cocktail,"Tequila",35.0,"Cointreau",
+                    20.0,"Lime Juice",15.0,null,0.0,null,0.0,
+                    null,0.0,null,0.0,null,0.0,null,0.0,
+                    null,0.0,null,0.0,null,0.0,null,
+                    0.0,null,0.0,null,0.0);
 
         }
         if(oldVersion < 2){
