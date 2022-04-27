@@ -1,12 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/photo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_gravity="center_horizontal"
+        android:text="hello"
+        android:textSize="32dp"/>
+
+
+
+<LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="10dp"
     tools:context=".DrinksListFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing1"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing2"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing3"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing4"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing5"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing6"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing7"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing8"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing9"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing10"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing11"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing12"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing13"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing14"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing15"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt1"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt2"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt3"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt4"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt5"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt6"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt7"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt8"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt9"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt10"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt11"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt12"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt13"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt14"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingamt15"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:text="test"/>
+
+    </LinearLayout>
+</LinearLayout>
 </LinearLayout>
