@@ -13,4 +13,8 @@
     <string name="action_settings">Settings</string>
     <string name="action_home">Home</string>
     <string name="action_share">Share</string>
+    <string name="add_ingredient_name_hint">Ingredient name</string>
+    <string name="add_ingredient_quantity_hint">Ingredient quantity</string>
+    <string name="add_ingredient_confirm">ADD</string>
+    <string name="add_ingredient_cancel">CANCEL</string>
 </resources>
