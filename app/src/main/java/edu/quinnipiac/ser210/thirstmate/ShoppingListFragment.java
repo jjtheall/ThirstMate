@@ -93,6 +93,15 @@ public class ShoppingListFragment extends Fragment {
             addIngredientDialog.show(getFragmentManager(), "addIngredientToShopping");
         });
 
+        view.findViewById(R.id.clearIngredients).setOnClickListener(view1 -> {
+
+            ingredients.clear();
+            ingredientsShopping.clear();
+            adapter.clearIngredients();
+
+            updateIngredients(ingredients, adapter);
+        });
+
         return view;
     }
 
@@ -101,6 +110,10 @@ public class ShoppingListFragment extends Fragment {
             ingredients.add(ingredientsShopping.get(counter % ingredientsShopping.size()));
             counter++;
             adapter.notifyItemInserted(ingredients.size() - 1);
+        }
+        else{
+            counter = 0;
+            adapter.notifyDataSetChanged();
         }
     }
 
