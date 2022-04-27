@@ -246,4 +246,18 @@ public class DrinkViewActivity extends AppCompatActivity {
             ing15AmtTextView.setVisibility(View.VISIBLE);
         }
     }
+
+    public void onSubtractDrinkQuantity(View view){
+        TextView drinkQuantity = (TextView) findViewById(R.id.drink_quantity);
+        int curNum = Integer.parseInt(String.valueOf(drinkQuantity.getText()));
+        if(curNum > 0){
+            drinkQuantity.setText("" + (curNum-1));
+        }
+    }
+
+    public void onAddDrinkQuantity(View view) {
+        TextView drinkQuantity = (TextView) findViewById(R.id.drink_quantity);
+        int curNum = Integer.parseInt(String.valueOf(drinkQuantity.getText()));
+        drinkQuantity.setText("" + (curNum+1));
+    }
 }
