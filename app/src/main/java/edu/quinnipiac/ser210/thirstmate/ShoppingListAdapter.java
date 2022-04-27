@@ -13,6 +13,7 @@ import java.util.List;
 public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListVH>{
 
     List<Ingredient> ingredients;
+    ShoppingListVH holder;
 
     public ShoppingListAdapter(List<Ingredient> ingredients){
         this.ingredients = ingredients;
@@ -26,6 +27,7 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListVH>{
 
     @Override
     public void onBindViewHolder(@NonNull ShoppingListVH holder, int position) {
+        this.holder = holder;
         holder.nameText.setText(ingredients.get(position).getName());
         if(ingredients.get(position).getQuantity() != 0){ holder.quantityText.setText("" + ingredients.get(position).getQuantity()); }
     }
@@ -34,6 +36,13 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListVH>{
     public int getItemCount() {
         return ingredients.size();
     }
+
+    public void clearIngredients(){
+       ingredients.clear();
+       holder.nameText.setText("");
+       holder.quantityText.setText("");
+    }
+
 }
 
 class ShoppingListVH extends RecyclerView.ViewHolder{
@@ -48,6 +57,8 @@ class ShoppingListVH extends RecyclerView.ViewHolder{
         nameText = itemView.findViewById(R.id.ingredientName);
         quantityText = itemView.findViewById(R.id.ingredientQuantity);
         itemView.findViewById(R.id.deleteIngredient).setOnClickListener(view -> {
+            nameText.setText("");
+            quantityText.setText("");
             adapter.ingredients.remove(getAdapterPosition());
             adapter.notifyItemRemoved(getAdapterPosition());
         });
@@ -57,4 +68,5 @@ class ShoppingListVH extends RecyclerView.ViewHolder{
         this.adapter = adapter;
         return this;
     }
+
 }

@@ -13,11 +13,28 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/addIngredient"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_ingredient_button"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/addIngredient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add_ingredient_button"
+            android:layout_weight="2"
+            android:layout_margin="30dp"/>
+
+        <Button
+            android:id="@+id/clearIngredients"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_ingredients_button"
+            android:layout_weight="2"
+            android:layout_margin="30dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>

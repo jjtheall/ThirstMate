@@ -3,6 +3,7 @@ package edu.quinnipiac.ser210.thirstmate;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -40,8 +41,10 @@ public class AddIngredientDialog extends DialogFragment {
                         if(!text1.getText().toString().equals("")){
                             if(!text2.getText().toString().equals("")) {
                                 try{
+                                    Log.d("Huh", text2.getText().toString());
                                 ShoppingListFragment.ingredientsShopping.add(new Ingredient(text1.getText().toString(), Double.parseDouble(text2.getText().toString())));
                                 ShoppingListFragment.updateIngredients(ingredients, adapter);
+                                text2.setText("");
                                 } catch (NumberFormatException e){
                                     Toast toast = Toast.makeText(getActivity(), "Ingredient quantity must be a number", Toast.LENGTH_SHORT);
                                     toast.show();
