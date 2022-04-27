@@ -1,7 +1,11 @@
 package edu.quinnipiac.ser210.thirstmate;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -30,7 +35,9 @@ public class ShoppingListFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private int counter = 0;
+    private static int counter = 0;
+
+    public static ArrayList<Ingredient> ingredientsShopping = new ArrayList<>();
 
     public ShoppingListFragment() {
         // Required empty public constructor
@@ -80,11 +87,22 @@ public class ShoppingListFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         view.findViewById(R.id.addIngredient).setOnClickListener(view1 -> {
-            ingredients.add(Ingredient.data[counter%5]);
-            counter++;
-            adapter.notifyItemInserted(ingredients.size()-1);
+            AddIngredientDialog addIngredientDialog = new AddIngredientDialog();
+            addIngredientDialog.setIngredients(ingredients);
+            addIngredientDialog.setAdapter(adapter);
+            addIngredientDialog.show(getFragmentManager(), "addIngredientToShopping");
         });
 
         return view;
     }
+
+    public static void updateIngredients(List<Ingredient> ingredients, ShoppingListAdapter adapter){
+        if(ingredientsShopping.size() != 0) {
+            ingredients.add(ingredientsShopping.get(counter % ingredientsShopping.size()));
+            counter++;
+            adapter.notifyItemInserted(ingredients.size() - 1);
+        }
+    }
+
+
 }
