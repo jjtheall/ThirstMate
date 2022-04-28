@@ -38,10 +38,6 @@ public class Drink {
         return this.ingredients;
     }
 
-    public Ingredient getIngredientAtIndex(int index){
-        return this.ingredients[index];
-    }
-
     public int getImageResourceId(){
         return this.imageResourceId;
     }
