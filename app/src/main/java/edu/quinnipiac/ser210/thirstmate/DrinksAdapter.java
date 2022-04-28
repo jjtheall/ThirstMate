@@ -3,6 +3,7 @@ package edu.quinnipiac.ser210.thirstmate;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,8 +52,8 @@ class DrinksVH extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         this.drinkListener = drinkListener;
 
-        nameText = itemView.findViewById(R.id.drinkName);
-        drinkPhoto = itemView.findViewById(R.id.drinkPhoto);
+        nameText = (TextView)itemView.findViewById(R.id.drinkName);
+        drinkPhoto = (ImageView)itemView.findViewById(R.id.drinkPhoto);
 //        itemView.findViewById(R.id.deleteIngredient).setOnClickListener(view -> {
 //            adapter.drinks.remove(getAdapterPosition());
 //            adapter.notifyItemRemoved(getAdapterPosition());

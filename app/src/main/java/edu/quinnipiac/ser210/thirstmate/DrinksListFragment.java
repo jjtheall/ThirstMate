@@ -46,7 +46,6 @@ public class DrinksListFragment extends Fragment implements DrinksVH.OnDrinkList
 
     public DrinksListFragment() {
         // Required empty public constructor
-        Log.d("help","inside drinksListFragment constructor");
     }
 
     /**
@@ -108,7 +107,6 @@ public class DrinksListFragment extends Fragment implements DrinksVH.OnDrinkList
                 String drinkName = cursor.getString(0);
                 int drinkPhotoId = cursor.getInt(1);
                 String ing1 = cursor.getString(2);
-                //Log.d("ing1 in cursor.moveToNext()",ing1);
                 String ing2 = cursor.getString(4);
                 String ing3 = cursor.getString(6);
                 String ing4 = cursor.getString(8);

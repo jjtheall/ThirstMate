@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class ThirstMateDBHelper extends SQLiteOpenHelper {
 
@@ -110,7 +111,7 @@ public class ThirstMateDBHelper extends SQLiteOpenHelper {
                     null,0.0,null,0.0,null,0.0,null,
                     0.0,null,0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0);
-            insertDrink(db,"Blue Hawaiian",R.drawable.cocktail,"Rum",30.0,
+            insertDrink(db,"Blue Hawaiian",R.drawable.bluehawaiian,"Rum",30.0,
                     "Blue Curacao",15.0,"Coconut Cream",15.0,"Pineapple Juice",
                     60.0,"Ice",0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
@@ -121,18 +122,18 @@ public class ThirstMateDBHelper extends SQLiteOpenHelper {
                     null,0.0,null,0.0,null,0.0,null,
                     0.0,null,0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,0.0);
-            insertDrink(db,"Bay Breeze",R.drawable.cocktail,"Vodka",60.0,
+            insertDrink(db,"Bay Breeze",R.drawable.baybreeze,"Vodka",60.0,
                     "Cranberry Juice",90.0,"Pineapple Juice",90.0,"Ice",
                     0.0,null,0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
                     0.0,null,0.0,null,0.0,null,0.0,
                     null,0.0);
-            insertDrink(db,"Tequila Sunrise",R.drawable.cocktail,"Tequila",45.0,
+            insertDrink(db,"Tequila Sunrise",R.drawable.teqsunrise,"Tequila",45.0,
                     "Orange Juice",90.0,"Grenadine",15.0,"Ice",0.0,
                     null,0.0,null,0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
                     0.0,null,0.0,null,0.0,null,0.0);
-            insertDrink(db,"Margarita",R.drawable.cocktail,"Tequila",35.0,"Cointreau",
+            insertDrink(db,"Margarita",R.drawable.marg,"Tequila",35.0,"Cointreau",
                     20.0,"Lime Juice",15.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
