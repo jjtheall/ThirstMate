@@ -18,6 +18,7 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksVH>{
     private DrinksVH.OnDrinkListener mDrinkListener;
 
     public DrinksAdapter(List<Drink> drinks, DrinksVH.OnDrinkListener drinkListener){
+        //maybe replace this line with async call to database instead of passing in drinks list parameter
         this.drinks = drinks;
         this.mDrinkListener = drinkListener;
     }
