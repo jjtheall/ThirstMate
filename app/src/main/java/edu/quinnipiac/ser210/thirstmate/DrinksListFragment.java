@@ -175,7 +175,7 @@ public class DrinksListFragment extends Fragment implements DrinksVH.OnDrinkList
     public void onDrinkClicked(int pos) {
         Intent intent = new Intent(getActivity(),DrinkViewActivity.class);
         Drink selected = drinks.get(pos);
-
+        
         String drinkName = selected.getName();
         intent.putExtra(DrinkViewActivity.EXTRA_DRINKNAME,drinkName);
 

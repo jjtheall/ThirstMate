@@ -105,7 +105,7 @@ public class ThirstMateDBHelper extends SQLiteOpenHelper {
                     "ING15AMT REAL) ;"
             );
 
-            insertDrink(db,"Rum and Coke",R.drawable.cocktail,"Rum",45.0,"Coke",
+            insertDrink(db,"Rum and Coke",R.drawable.rum_coke,"Rum",45.0,"Coke",
                     90.0,"Ice",0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
                     0.0,null,0.0,null,0.0,null,0.0,
@@ -116,7 +116,7 @@ public class ThirstMateDBHelper extends SQLiteOpenHelper {
                     null,0.0,null,0.0,null,0.0,null,
                     0.0,null,0.0,null,0.0,null,0.0,
                     null,0.0);
-            insertDrink(db,"Vodka Cranberry",R.drawable.cocktail,"Vodka",60.0,
+            insertDrink(db,"Vodka Cranberry",R.drawable.vodkacran,"Vodka",60.0,
                     "Cranberry Juice",90.0,"Ice",0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
                     0.0,null,0.0,null,0.0,null,0.0,
