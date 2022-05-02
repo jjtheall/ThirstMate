@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class SettingsActivity extends AppCompatActivity {
     private ShareActionProvider shareActionProvider;
@@ -59,4 +60,10 @@ public class SettingsActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    public void onTestThemeClick(View view){
+        //this.setTheme(R.style.);
+        //themeUtils.changeToTheme(this, themeUtils.BLACK);
+    }
+
 }
