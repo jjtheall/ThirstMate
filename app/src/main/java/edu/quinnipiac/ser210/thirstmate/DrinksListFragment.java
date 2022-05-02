@@ -46,6 +46,12 @@ public class DrinksListFragment extends Fragment implements DrinksVH.OnDrinkList
 
     public DrinksListFragment() {
         // Required empty public constructor
+        Log.d("help","inside drinksListFragment constructor");
+    }
+
+    public DrinksListFragment(List<Drink> drinks){
+        this.drinks = drinks;
+        Log.d("help","inside drinksListFragment constructor");
     }
 
     /**
@@ -94,6 +100,7 @@ public class DrinksListFragment extends Fragment implements DrinksVH.OnDrinkList
         }
         */
 
+        /*
         SQLiteOpenHelper thirstMateDBHelper = new ThirstMateDBHelper(getActivity());
         try{
             db = thirstMateDBHelper.getReadableDatabase();
@@ -165,6 +172,7 @@ public class DrinksListFragment extends Fragment implements DrinksVH.OnDrinkList
             Toast toast = Toast.makeText(view.getContext(),"Database unavailable",Toast.LENGTH_SHORT);
             toast.show();
         }
+         */
 
         return view;
     }
