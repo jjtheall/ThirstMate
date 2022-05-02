@@ -88,6 +88,7 @@ public class DrinksListFragment extends Fragment implements DrinksVH.OnDrinkList
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_drinks_list, container, false);
 
+        
         RecyclerView recyclerView = view.findViewById(R.id.recycleViewDrinks);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         DrinksAdapter adapter = new DrinksAdapter(drinks, this);
