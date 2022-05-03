@@ -52,4 +52,5 @@
     <string name="shopping_label">Shopping List</string>
     <string name="drink_view_ingredient_label">Ingredients</string>
     <string name="drink_view_ingredient_amt_label">Ingredient Amounts</string>
+    <string name="clear_user_drinks">CLEAR ALL USER CREATED DRINKS</string>
 </resources>

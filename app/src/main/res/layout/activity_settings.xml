@@ -47,4 +47,13 @@
         android:text="@string/theme_button"
         android:onClick="onThemeTestClick"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/clear_user_drinks"
+        android:backgroundTint="@color/red_light"
+        android:onClick="onClearUserDrinks"/>
+
 </LinearLayout>
