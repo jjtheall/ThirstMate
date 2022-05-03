@@ -34,7 +34,6 @@ public class HomepageFragment extends Fragment implements DrinksVH.OnDrinkListen
     private String mParam2;
 
     private Random rand = new Random();
-    private List<Drink> drinksButWhat = new LinkedList<>();
     private ArrayList<Drink> drinksBetter = new ArrayList<>();
     private int randomIndex = 0;
     List<Drink> featuredDrinks = new LinkedList<>();
