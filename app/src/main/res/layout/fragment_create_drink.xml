@@ -1,14 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<LinearLayout
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateDrinkFragment">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fragment_create_drink" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_drink_title"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/create_drink"
+        android:textSize="36dp"/>
 
-</FrameLayout>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/drink_name"
+        android:hint="Drink Name"/>
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:context=".CreateDrinkFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Ingredient Names:"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing1"
+                android:padding="5dp"
+                android:hint="Ingredient 1"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing2"
+                android:padding="5dp"
+                android:hint="Ingredient 2"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing3"
+                android:padding="5dp"
+                android:hint="Ingredient 3"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing4"
+                android:padding="5dp"
+                android:hint="Ingredient 4"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing5"
+                android:padding="5dp"
+                android:hint="Ingredient 5"/>
+
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ing6"
+            android:padding="5dp"
+            android:hint="Ingredient 6"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing7"
+                android:padding="5dp"
+                android:hint="Ingredient 7"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing8"
+                android:padding="5dp"
+                android:hint="Ingredient 8"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing9"
+                android:padding="5dp"
+                android:hint="Ingredient 9"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing10"
+                android:padding="5dp"
+                android:hint="Ingredient 10"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing11"
+                android:padding="5dp"
+                android:hint="Ingredient 11"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing12"
+                android:padding="5dp"
+                android:hint="Ingredient 12"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing13"
+                android:padding="5dp"
+                android:hint="Ingredient 13"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing14"
+                android:padding="5dp"
+                android:hint="Ingredient 14"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ing15"
+                android:padding="5dp"
+                android:hint="Ingredient 15"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Ingredient Quantities:"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt1"
+                android:padding="5dp"
+                android:hint="Quantity 1"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt2"
+                android:padding="5dp"
+                android:hint="Quantity 2"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt3"
+                android:padding="5dp"
+                android:hint="Quantity 3"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt4"
+                android:padding="5dp"
+                android:hint="Quantity 4"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt5"
+                android:padding="5dp"
+                android:hint="Quantity 5"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt6"
+                android:padding="5dp"
+                android:hint="Quantity 6"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt7"
+                android:padding="5dp"
+                android:hint="Quantity 7"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt8"
+                android:padding="5dp"
+                android:hint="Quantity 8"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt9"
+                android:padding="5dp"
+                android:hint="Quantity 9"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt10"
+                android:padding="5dp"
+                android:hint="Quantity 10"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt11"
+                android:padding="5dp"
+                android:hint="Quantity 11"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt12"
+                android:padding="5dp"
+                android:hint="Quantity 12"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt13"
+                android:padding="5dp"
+                android:hint="Quantity 13"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt14"
+                android:padding="5dp"
+                android:hint="Quantity 14"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingamt15"
+                android:padding="5dp"
+                android:hint="Quantity 15"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Create"
+        android:id="@+id/create_drink_button"/>
+
+</LinearLayout>
+</ScrollView>
