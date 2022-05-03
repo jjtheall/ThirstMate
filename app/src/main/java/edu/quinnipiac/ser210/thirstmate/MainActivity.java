@@ -29,6 +29,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private ShareActionProvider shareActionProvider;
     List<Drink> drinks = new LinkedList<>();
+    ViewPager pager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         //attach SectionsPagerAdapter to ViewPager
         SectionsPagerAdapter pagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        ViewPager pager = (ViewPager) findViewById(R.id.pager);
+        pager = (ViewPager) findViewById(R.id.pager);
         pager.setAdapter(pagerAdapter);
 
         //attach ViewPager to TabLayout
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    //change this method to accept list of ingredients
+    //TODO: change this method to accept list of ingredients
     public void setShareActionIntent(String text){
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
@@ -87,6 +88,15 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public ViewPager getPager(){
+        return pager;
+    }
+
+    public void updateDrinks(){
+        drinks.clear();
+        new FetchDrinksTask().execute();
     }
 
     private class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -213,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(MainActivity.this,"Database unavailable",Toast.LENGTH_SHORT);
                 toast.show();
             }
-
         }
     }
+
 }
