@@ -49,4 +49,7 @@
     <string name="sizing_label">Liquor Bottle Sizes</string>
     <string name="about_us">About Thirst Mate</string>
     <string name="featured_label">Featured Drinks</string>
+    <string name="shopping_label">Shopping List</string>
+    <string name="drink_view_ingredient_label">Ingredients</string>
+    <string name="drink_view_ingredient_amt_label">Ingredient Amounts</string>
 </resources>
