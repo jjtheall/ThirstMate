@@ -21,8 +21,17 @@ public class themeUtils {
             case "Orange":
                 activity.setTheme(R.style.OrangeTheme);
                 break;
+            case "Yellow":
+                activity.setTheme(R.style.YellowTheme);
+                break;
             case "Green":
                 activity.setTheme(R.style.GreenTheme);
+                break;
+            case "Blue":
+                activity.setTheme(R.style.BlueTheme);
+                break;
+            case "Pink":
+                activity.setTheme(R.style.PinkTheme);
                 break;
         }
     }

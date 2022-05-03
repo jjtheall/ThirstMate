@@ -25,12 +25,36 @@
         <item name="colorAccent">@color/RADICAL_RED</item>
     </style>
 
+    <!-- Yellow application theme. -->
+    <style name="YellowTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/yellow_light</item>
+        <item name="colorPrimaryDark">@color/yellow_dark</item>
+        <item name="colorAccent">@color/CORAL</item>
+    </style>
+
     <!-- Green application theme. -->
     <style name="GreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/green_light</item>
         <item name="colorPrimaryDark">@color/green_dark</item>
         <item name="colorAccent">@color/MAXIMUM_YELLOW</item>
+    </style>
+
+    <!-- Blue application theme. -->
+    <style name="BlueTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue_light</item>
+        <item name="colorPrimaryDark">@color/blue_dark</item>
+        <item name="colorAccent">@color/ELECTRIC_BLUE</item>
+    </style>
+
+    <!-- Pink application theme. -->
+    <style name="PinkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/pink_light</item>
+        <item name="colorPrimaryDark">@color/pink_dark</item>
+        <item name="colorAccent">@color/MEDIUM_PURPLE</item>
     </style>
 
 </resources>
