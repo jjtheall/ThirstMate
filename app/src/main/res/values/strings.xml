@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ThirstMate</string>
+    <string name="app_name">Thirst Mate</string>
     <string name="splash_text">Please drink responsibly. If you are in the US, by pressing the button below, you are confirming that you are at least 21 years of age.</string>
     <string name="splash_button">I am 21+</string>
     <string name="add_ingredient_button">ADD</string>
@@ -29,4 +29,23 @@
         <item>Pink</item>
     </string-array>
     <string name="theme_text">Theme Settings</string>
+    <string name="info_paragraph">Liquor can come in a variety of sizes. The most common sizes are a shot, a fifth,
+        a liter, and a handle. A shot contains 1 oz, a fifth contains 750 ml, a liter contains 1000 ml, and a handle
+        contains 1750 ml. Typically, a cocktail will contain 1 - 1.5 oz of liquor. However, the smallest volume of
+        alcohol sold is a nip which is 50 ml.</string>
+    <string name="warning">YE BE WARNED</string>
+    <string name="nip_label">Nip</string>
+    <string name="nip_amount">50 ml</string>
+    <string name="fifth_label">Fifth</string>
+    <string name="fifth_amount">750 ml</string>
+    <string name="liter_label">Liter</string>
+    <string name="liter_amount">1000 ml</string>
+    <string name="handle_label">Handle</string>
+    <string name="handle_amount">1750 ml</string>
+    <string name="info_blurp">Based on the amount of liquor in a selected drink and the desired amount of
+        servings, Thirst Mate will calculate the appropriate amount of liquor you need and what size bottle you should
+        buy.</string>
+    <string name="info_label">Information</string>
+    <string name="sizing_label">Liquor Bottle Sizes</string>
+    <string name="about_us">About Thirst Mate</string>
 </resources>

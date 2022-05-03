@@ -10,8 +10,6 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,12 +44,10 @@ public class DrinksListFragment extends Fragment implements DrinksVH.OnDrinkList
 
     public DrinksListFragment() {
         // Required empty public constructor
-        Log.d("help","inside drinksListFragment constructor");
     }
 
     public DrinksListFragment(List<Drink> drinks){
         this.drinks = drinks;
-        Log.d("help","inside drinksListFragment constructor");
     }
 
     /**
@@ -192,7 +188,6 @@ public class DrinksListFragment extends Fragment implements DrinksVH.OnDrinkList
         Ingredient[] ingredients = selected.getIngredients();
         for(int i=0; i< ingredients.length; i++){
             String ingName = ingredients[i].getName();
-            //Log.d("ingName in onDrinkClicked",ingName);
             double ingQuantity = ingredients[i].getQuantity();
             intent.putExtra(DrinkViewActivity.EXTRA_INGNAME + i,ingName);
             intent.putExtra(DrinkViewActivity.EXTRA_INGAMT + i,ingQuantity);
