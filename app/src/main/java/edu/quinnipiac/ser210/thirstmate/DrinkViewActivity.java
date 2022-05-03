@@ -335,71 +335,77 @@ public class DrinkViewActivity extends AppCompatActivity {
     }
 
     public void onAddIngredients(View view){
-        if(!ing1Name.equals("")){
-            Ingredient ing1 = new Ingredient(ing1Name,curNum * ing1Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing1);
-        }
-        if(!ing2Name.equals("")){
-            Ingredient ing2 = new Ingredient(ing2Name,curNum * ing2Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing2);
-        }
-        if(!ing3Name.equals("")){
-            Ingredient ing3 = new Ingredient(ing3Name,curNum * ing3Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing3);
-        }
-        if(!ing4Name.equals("")){
-            Ingredient ing4 = new Ingredient(ing4Name,curNum * ing4Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing4);
-        }
-        if(!ing5Name.equals("")){
-            Ingredient ing5 = new Ingredient(ing5Name,curNum * ing5Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing5);
-        }
-        if(!ing6Name.equals("")){
-            Ingredient ing6 = new Ingredient(ing6Name,curNum * ing6Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing6);
-        }
-        if(!ing7Name.equals("")){
-            Ingredient ing7 = new Ingredient(ing7Name,curNum * ing7Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing7);
-        }
-        if(!ing8Name.equals("")){
-            Ingredient ing8 = new Ingredient(ing8Name,curNum * ing8Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing8);
-        }
-        if(!ing9Name.equals("")){
-            Ingredient ing9 = new Ingredient(ing9Name,curNum * ing9Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing9);
-        }
-        if(!ing10Name.equals("")){
-            Ingredient ing10 = new Ingredient(ing10Name,curNum * ing10Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing10);
-        }
-        if(!ing11Name.equals("")){
-            Ingredient ing11 = new Ingredient(ing11Name,curNum * ing11Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing11);
-        }
-        if(!ing12Name.equals("")){
-            Ingredient ing12 = new Ingredient(ing12Name,curNum * ing12Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing12);
-        }
-        if(!ing13Name.equals("")){
-            Ingredient ing13 = new Ingredient(ing13Name,curNum * ing13Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing13);
-        }
-        if(!ing14Name.equals("")){
-            Ingredient ing14 = new Ingredient(ing14Name,curNum * ing14Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing14);
-        }
-        if(!ing15Name.equals("")){
-            Ingredient ing15 = new Ingredient(ing15Name,curNum * ing15Amt);
-            ShoppingListFragment.ingredientsShopping.add(ing15);
-        }
-        Toast toast = Toast.makeText(this, "Ingredients for " + drinkName + " were added to your shopping list",Toast.LENGTH_SHORT);
-        toast.show();
+        if(curNum > 0){
+            if(!ing1Name.equals("")){
+                Ingredient ing1 = new Ingredient(ing1Name,curNum * ing1Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing1);
+            }
+            if(!ing2Name.equals("")){
+                Ingredient ing2 = new Ingredient(ing2Name,curNum * ing2Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing2);
+            }
+            if(!ing3Name.equals("")){
+                Ingredient ing3 = new Ingredient(ing3Name,curNum * ing3Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing3);
+            }
+            if(!ing4Name.equals("")){
+                Ingredient ing4 = new Ingredient(ing4Name,curNum * ing4Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing4);
+            }
+            if(!ing5Name.equals("")){
+                Ingredient ing5 = new Ingredient(ing5Name,curNum * ing5Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing5);
+            }
+            if(!ing6Name.equals("")){
+                Ingredient ing6 = new Ingredient(ing6Name,curNum * ing6Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing6);
+            }
+            if(!ing7Name.equals("")){
+                Ingredient ing7 = new Ingredient(ing7Name,curNum * ing7Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing7);
+            }
+            if(!ing8Name.equals("")){
+                Ingredient ing8 = new Ingredient(ing8Name,curNum * ing8Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing8);
+            }
+            if(!ing9Name.equals("")){
+                Ingredient ing9 = new Ingredient(ing9Name,curNum * ing9Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing9);
+            }
+            if(!ing10Name.equals("")){
+                Ingredient ing10 = new Ingredient(ing10Name,curNum * ing10Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing10);
+            }
+            if(!ing11Name.equals("")){
+                Ingredient ing11 = new Ingredient(ing11Name,curNum * ing11Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing11);
+            }
+            if(!ing12Name.equals("")){
+                Ingredient ing12 = new Ingredient(ing12Name,curNum * ing12Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing12);
+            }
+            if(!ing13Name.equals("")){
+                Ingredient ing13 = new Ingredient(ing13Name,curNum * ing13Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing13);
+            }
+            if(!ing14Name.equals("")){
+                Ingredient ing14 = new Ingredient(ing14Name,curNum * ing14Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing14);
+            }
+            if(!ing15Name.equals("")){
+                Ingredient ing15 = new Ingredient(ing15Name,curNum * ing15Amt);
+                ShoppingListFragment.ingredientsShopping.add(ing15);
+            }
+            Toast toast = Toast.makeText(this, "Ingredients for " + drinkName + " were added to your shopping list",Toast.LENGTH_SHORT);
+            toast.show();
 
-        Intent intent = new Intent(this,MainActivity.class);
-        intent.putExtra("tabKey",1);
-        startActivity(intent);
+            Intent intent = new Intent(this,MainActivity.class);
+            intent.putExtra("tabKey",1);
+            startActivity(intent);
+        } else {
+            Toast toast = Toast.makeText(this, "Cannot add zero drinks!",Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
     }
 }
