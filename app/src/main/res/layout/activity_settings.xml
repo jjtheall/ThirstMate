@@ -29,7 +29,6 @@
         android:text="@string/theme_text" />
 
 
-
     <Spinner
         android:id="@+id/themeSpinner"
         android:layout_width="wrap_content"

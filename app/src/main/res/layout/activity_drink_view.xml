@@ -1,350 +1,356 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <com.google.android.material.appbar.AppBarLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbar" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="170dp"
-        android:layout_gravity="center_horizontal"
-        android:scaleType="fitXY"
-        android:id="@+id/photo"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/name"
-        android:layout_gravity="center_horizontal"
-        android:text="hello"
-        android:textSize="21dp"/>
-
-
-<LinearLayout
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    tools:context=".DrinksListFragment">
+    android:layout_height="match_parent" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/ing1"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing2"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/toolbar" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing3"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:id="@+id/photo"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ing4"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
+            android:id="@+id/name"
+            android:layout_gravity="center_horizontal"
+            android:text="hello"
+            android:textSize="21dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/ing5"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing6"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing7"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing8"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing9"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing10"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing11"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing12"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing13"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing14"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ing15"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt1"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt2"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt3"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt4"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt5"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt6"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt7"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt8"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt9"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt10"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt11"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt12"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt13"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt14"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ingamt15"
-            android:padding="3dp"
-            android:visibility="invisible"
-            android:text="test"/>
-
-    </LinearLayout>
-
-
-</LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:id="@+id/minus"
-            android:text="-"
-            android:layout_gravity="center_vertical|center"
-            android:layout_margin="16dp"
-            android:onClick="onSubtractDrinkQuantity"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:id="@+id/drink_quantity"
-            android:padding="16dp"
-            android:layout_margin="16dp"
-            android:layout_gravity="center"
-            android:gravity="top"/>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:id="@+id/plus"
-            android:text="+"
-            android:layout_gravity="center_vertical|center"
-            android:layout_margin="16dp"
-            android:onClick="onAddDrinkQuantity"/>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:id="@+id/confirm"
-            android:text="OK"
-            android:layout_gravity="center_vertical|center"
-            android:layout_margin="16dp"
+            android:orientation="horizontal"
             android:paddingLeft="16dp"
-            android:onClick="onAddIngredients"/>
+            android:paddingRight="16dp"
+            tools:context=".DrinksListFragment">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing1"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing2"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing3"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing4"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing5"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing6"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing7"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing8"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing9"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing10"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing11"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing12"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing13"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing14"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ing15"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt1"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt2"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt3"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt4"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt5"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt6"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt7"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt8"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt9"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt10"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt11"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt12"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt13"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt14"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingamt15"
+                    android:padding="3dp"
+                    android:visibility="invisible"
+                    android:text="test"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/minus"
+                android:text="-"
+                android:layout_gravity="center_vertical|center"
+                android:layout_margin="16dp"
+                android:onClick="onSubtractDrinkQuantity"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/drink_quantity"
+                android:padding="16dp"
+                android:layout_margin="16dp"
+                android:layout_gravity="center"
+                android:gravity="top"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/plus"
+                android:text="+"
+                android:layout_gravity="center_vertical|center"
+                android:layout_margin="16dp"
+                android:onClick="onAddDrinkQuantity"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/confirm"
+                android:text="OK"
+                android:layout_gravity="center_vertical|center"
+                android:layout_margin="16dp"
+                android:paddingLeft="16dp"
+                android:onClick="onAddIngredients"/>
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+</ScrollView>

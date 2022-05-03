@@ -2,9 +2,8 @@
     <string name="app_name">ThirstMate</string>
     <string name="splash_text">Please drink responsibly. If you are in the US, by pressing the button below, you are confirming that you are at least 21 years of age.</string>
     <string name="splash_button">I am 21+</string>
-    <string name="hello_blank_fragment">fuck you</string>
     <string name="add_ingredient_button">ADD</string>
-    <string name="delete_ingredient">DELETE</string>
+    <string name="delete_ingredient">X</string>
     <string name="home_tab">Home</string>
     <string name="drinks_tab">Drinks</string>
     <string name="shopping_tab">Shopping</string>
@@ -24,7 +23,10 @@
         <item>Original</item>
         <item>Red</item>
         <item>Orange</item>
+        <item>Yellow</item>
         <item>Green</item>
+        <item>Blue</item>
+        <item>Pink</item>
     </string-array>
     <string name="theme_text">Theme Settings</string>
 </resources>
