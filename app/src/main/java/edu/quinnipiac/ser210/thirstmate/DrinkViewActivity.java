@@ -397,5 +397,9 @@ public class DrinkViewActivity extends AppCompatActivity {
         }
         Toast toast = Toast.makeText(this, "Ingredients for " + drinkName + " were added to your shopping list",Toast.LENGTH_SHORT);
         toast.show();
+
+        Intent intent = new Intent(this,MainActivity.class);
+        intent.putExtra("tabKey",1);
+        startActivity(intent);
     }
 }
