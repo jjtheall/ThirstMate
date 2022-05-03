@@ -51,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
 
         //execute async task
         new FetchDrinksTask().execute();
+
+        Intent intent = getIntent();
+        if(intent != null){
+            int drinkTab = intent.getIntExtra("tabKey",0);
+            pager.setCurrentItem(drinkTab);
+        }
     }
 
     @Override
