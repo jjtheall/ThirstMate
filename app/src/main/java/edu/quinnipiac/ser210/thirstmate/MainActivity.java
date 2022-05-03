@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int pos){
             switch(pos){
                 case 0:
-                    return new HomepageFragment();
+                    return new HomepageFragment(drinks);
                 case 1:
                     return new DrinksListFragment(drinks);
                 case 2:
