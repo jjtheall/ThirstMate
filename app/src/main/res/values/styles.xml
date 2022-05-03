@@ -54,7 +54,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/pink_light</item>
         <item name="colorPrimaryDark">@color/pink_dark</item>
-        <item name="colorAccent">@color/MEDIUM_PURPLE</item>
+        <item name="colorAccent">@color/BLUE_VIOLET</item>
     </style>
 
 </resources>

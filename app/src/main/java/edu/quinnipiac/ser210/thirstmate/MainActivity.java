@@ -16,7 +16,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -149,7 +148,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected Boolean doInBackground(Integer... integers) {
-            Log.d("FetchDrinksTask","inside doInBackground");
             SQLiteOpenHelper thirstMateDBHelper = new ThirstMateDBHelper(MainActivity.this);
             try{
                 SQLiteDatabase db = thirstMateDBHelper.getReadableDatabase();
@@ -213,7 +211,6 @@ public class MainActivity extends AppCompatActivity {
 
                     Drink newDrink = new Drink(drinkName,ingredients,drinkPhotoId);
                     drinks.add(newDrink);
-                    Log.d("inside doInBackground",newDrink.toString());
                     //adapter.notifyItemInserted(drinks.size()-1);
                 }
                 cursor.close();
@@ -225,7 +222,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         protected void onPostExecute(Boolean success){
-            Log.d("FetchDrinksTask","inside onPostExecute");
             if(!success){
                 Toast toast = Toast.makeText(MainActivity.this,"Database unavailable",Toast.LENGTH_SHORT);
                 toast.show();

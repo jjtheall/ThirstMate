@@ -11,7 +11,6 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,7 +71,6 @@ public class CreateDrinkFragment extends Fragment {
 
     public CreateDrinkFragment() {
         // Required empty public constructor
-        Log.d("help","inside createDrinkFragment constructor");
     }
 
     /**

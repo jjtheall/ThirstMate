@@ -7,7 +7,6 @@ import androidx.core.view.MenuItemCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -74,6 +73,7 @@ public class DrinkViewActivity extends AppCompatActivity {
         drinkName = intent.getStringExtra(EXTRA_DRINKNAME);
         TextView drinkNameTextView = (TextView) findViewById(R.id.name);
         drinkNameTextView.setText(drinkName);
+        this.setTitle(drinkName);
 
         int photoId = intent.getIntExtra(EXTRA_IMGRESID,0);
         ImageView photo = (ImageView) findViewById(R.id.photo);

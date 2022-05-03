@@ -55,10 +55,6 @@ class DrinksVH extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         nameText = (TextView)itemView.findViewById(R.id.drinkName);
         drinkPhoto = (ImageView)itemView.findViewById(R.id.drinkPhoto);
-//        itemView.findViewById(R.id.deleteIngredient).setOnClickListener(view -> {
-//            adapter.drinks.remove(getAdapterPosition());
-//            adapter.notifyItemRemoved(getAdapterPosition());
-//        });
         itemView.setOnClickListener(this);
     }
 
