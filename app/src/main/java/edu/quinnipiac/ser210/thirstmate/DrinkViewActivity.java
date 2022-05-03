@@ -64,6 +64,7 @@ public class DrinkViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        themeUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_drink_view);
 
         androidx.appcompat.widget.Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);

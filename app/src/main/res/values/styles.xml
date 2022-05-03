@@ -9,12 +9,28 @@
         <item name="colorAccent">@color/teal_200</item>
     </style>
 
-    <!-- Black application theme. -->
-    <style name="BlackTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Red application theme. -->
+    <style name="RedTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorPrimary">@color/red_light</item>
+        <item name="colorPrimaryDark">@color/red_dark</item>
+        <item name="colorAccent">@color/MAJOR_BLUE</item>
+    </style>
+
+    <!-- Orange application theme. -->
+    <style name="OrangeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/orange_light</item>
+        <item name="colorPrimaryDark">@color/orange_dark</item>
+        <item name="colorAccent">@color/RADICAL_RED</item>
+    </style>
+
+    <!-- Green application theme. -->
+    <style name="GreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/green_light</item>
+        <item name="colorPrimaryDark">@color/green_dark</item>
+        <item name="colorAccent">@color/MAXIMUM_YELLOW</item>
     </style>
 
 </resources>

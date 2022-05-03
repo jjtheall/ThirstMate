@@ -5,22 +5,32 @@ import androidx.appcompat.widget.ShareActionProvider;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.MenuItemCompat;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 public class SettingsActivity extends AppCompatActivity {
     private ShareActionProvider shareActionProvider;
+    private Spinner themeColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        themeUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_settings);
 
         androidx.appcompat.widget.Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        themeColor = (Spinner) findViewById(R.id.themeSpinner);
+        ArrayAdapter arrayAdapter = (ArrayAdapter) themeColor.getAdapter();
+        themeColor.setSelection(arrayAdapter.getPosition(themeUtils.globalTheme));
     }
 
     @Override
@@ -61,9 +71,10 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
-    public void onTestThemeClick(View view){
-        //this.setTheme(R.style.);
-        //themeUtils.changeToTheme(this, themeUtils.BLACK);
+    public void onThemeTestClick(View view){
+        themeUtils.changeToTheme(String.valueOf(themeColor.getSelectedItem()));
+        this.finish();
+        this.startActivity(new Intent(this, this.getClass()));
     }
 
 }

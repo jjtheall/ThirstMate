@@ -18,6 +18,13 @@
     <string name="add_ingredient_confirm">ADD</string>
     <string name="add_ingredient_cancel">CANCEL</string>
     <string name="clear_ingredients_button">CLEAR</string>
-    <string name="test_theme_button">Test</string>
     <string name="create_drink">Create Your Own Drink</string>
+    <string name="theme_button">SET THEME</string>
+    <string-array name="theme_colors">
+        <item>Original</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Green</item>
+    </string-array>
+    <string name="theme_text">Theme Settings</string>
 </resources>

@@ -19,10 +19,32 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <Button
+    <TextView
+        android:id="@+id/themeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/test_theme_button"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="12dp"
+        android:textSize="20dp"
+        android:text="@string/theme_text" />
+
+
+
+    <Spinner
+        android:id="@+id/themeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:entries="@array/theme_colors"/>
+
+    <Button
+        android:id="@+id/themeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/theme_button"
         android:onClick="onThemeTestClick"/>
 
 </LinearLayout>
