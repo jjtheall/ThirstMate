@@ -51,7 +51,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_gravity="center"
+                android:textAlignment="center"
                 android:padding="3dp"
                 android:text="@string/drink_view_ingredient_label"/>
 
@@ -59,7 +59,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_gravity="center"
+                android:textAlignment="center"
                 android:padding="3dp"
                 android:text="@string/drink_view_ingredient_amt_label"/>
 
