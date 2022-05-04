@@ -29,6 +29,8 @@ import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private ShareActionProvider shareActionProvider;
     List<Drink> drinks = new LinkedList<>();
     ViewPager pager;
+    private List<String> liquorNames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
         //execute async task
         drinks.clear();
         new FetchDrinksTask().execute();
+
+        //getting liquor names from string array
+        liquorNames = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.liquors)));
 
         Intent intent = getIntent();
         if(intent != null){
@@ -84,7 +90,31 @@ public class MainActivity extends AppCompatActivity {
 
         for(int i=0; i<ShoppingListFragment.ingredientsShopping.size(); i++){
             Ingredient curIng = ShoppingListFragment.ingredientsShopping.get(i);
-            ingredientString = ingredientString + curIng.getName() + " - " + curIng.getQuantity() + "\n";
+            double curQuantity = curIng.getQuantity();
+            String quantityString = "";
+
+            if(liquorNames.contains(curIng.getName())){
+                // Nips
+                if (curQuantity <= 250) {
+                    if(curQuantity <= 50){quantityString = " - 1 Nip";}
+                    else{quantityString = " - " + (int)Math.ceil(curQuantity/50) + " Nips";}
+                }
+                // Fifth
+                else if(curQuantity <= 750){ quantityString = " - 1 Fifth";}
+                // Liter
+                else if(curQuantity <= 1000){ quantityString = " - 1 Liter";}
+                // Handles
+                else if(curQuantity > 1000){
+                    if(curQuantity <= 1750){quantityString = " - 1 Handle";}
+                    else{quantityString = " - " + (int)Math.ceil(curQuantity/1750) + " Handles";}
+                }
+            }
+            else{
+                if(curQuantity != 0){
+                    quantityString = " - " + curQuantity + " ml";
+                }
+            }
+            ingredientString = ingredientString + curIng.getName() + quantityString + "\n";
         }
 
         intent.putExtra(Intent.EXTRA_TEXT,ingredientString);
