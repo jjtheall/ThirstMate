@@ -1,3 +1,9 @@
+/*
+ * ThirstMate App
+ * @author: Jack Theall, MacArthur Mills
+ * Developed Spring '22
+ */
+
 package edu.quinnipiac.ser210.thirstmate;
 
 import android.content.Intent;
