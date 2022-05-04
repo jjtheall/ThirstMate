@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     List<Drink> drinks = new LinkedList<>();
     ViewPager pager;
     private List<String> liquorNames;
+    private List<String> liqueurNames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         //getting liquor names from string array
         liquorNames = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.liquors)));
+        liqueurNames = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.liqueurs)));
 
         Intent intent = getIntent();
         if(intent != null){
@@ -88,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
 
         String ingredientString = "";
 
+        //iterate through ingredients in shopping list, assembling a string that includes
+        //all ingredient names and quantities, modified from mililiters to nip/fifth/liter/handle
+        //then start share intent with said string
         for(int i=0; i<ShoppingListFragment.ingredientsShopping.size(); i++){
             Ingredient curIng = ShoppingListFragment.ingredientsShopping.get(i);
             double curQuantity = curIng.getQuantity();
@@ -108,6 +113,10 @@ public class MainActivity extends AppCompatActivity {
                     if(curQuantity <= 1750){quantityString = " - 1 Handle";}
                     else{quantityString = " - " + (int)Math.ceil(curQuantity/1750) + " Handles";}
                 }
+            } else if (liqueurNames.contains(curIng.getName())){
+                // Fifth
+                if(curQuantity <= 750){ quantityString = " - 1 Fifth";}
+                else{quantityString = " - " + (int)Math.ceil(curQuantity/750) + " Fifths";}
             }
             else{
                 if(curQuantity != 0){
@@ -144,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
         return pager;
     }
 
+    //clears list of drinks and repopulates it from async call to database
     public void updateDrinks(){
         drinks.clear();
         new FetchDrinksTask().execute();
@@ -190,6 +200,8 @@ public class MainActivity extends AppCompatActivity {
 
     private class FetchDrinksTask extends AsyncTask<Integer,Void,Boolean> {
 
+        //fetches all drink records from database, parsing through all name, image, and ingredient data
+        //creates data access object with retrieved info then adds new object to drinks list
         @Override
         protected Boolean doInBackground(Integer... integers) {
             SQLiteOpenHelper thirstMateDBHelper = new ThirstMateDBHelper(MainActivity.this);

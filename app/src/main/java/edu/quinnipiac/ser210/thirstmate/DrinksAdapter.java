@@ -24,7 +24,6 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksVH>{
     private DrinksVH.OnDrinkListener mDrinkListener;
 
     public DrinksAdapter(List<Drink> drinks, DrinksVH.OnDrinkListener drinkListener){
-        //maybe replace this line with async call to database instead of passing in drinks list parameter
         this.drinks = drinks;
         this.mDrinkListener = drinkListener;
     }
@@ -37,6 +36,7 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksVH>{
 
     @Override
     public void onBindViewHolder(@NonNull DrinksVH holder, int position) {
+        //setting name and image for each card view
         holder.nameText.setText(drinks.get(position).getName());
         holder.drinkPhoto.setImageResource(drinks.get(position).getImageResourceId());
     }
@@ -57,6 +57,7 @@ class DrinksVH extends RecyclerView.ViewHolder implements View.OnClickListener{
     public DrinksVH(@NonNull View itemView, OnDrinkListener drinkListener){
         super(itemView);
 
+        //getting references to drink listener, name, and photo views
         this.drinkListener = drinkListener;
 
         nameText = (TextView)itemView.findViewById(R.id.drinkName);

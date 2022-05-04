@@ -30,6 +30,8 @@ public class ThirstMateDBHelper extends SQLiteOpenHelper {
         updateMyDatabase(sqLiteDatabase,oldVersion,newVersion);
     }
 
+    //inserts into database a drink with name, image resource id, ingredient names and amounts,
+    // and whether or not it was user entered
     private static void insertDrink(SQLiteDatabase db, String name, int imageResourceId, String ing1, double ing1amt, String ing2,
                                     double ing2amt, String ing3, double ing3amt, String ing4, double ing4amt,
                                     String ing5, double ing5amt, String ing6, double ing6amt, String ing7,
@@ -75,6 +77,7 @@ public class ThirstMateDBHelper extends SQLiteOpenHelper {
         db.insert("DRINK",null,drinkValues);
     }
 
+    //if version is less than one, creates new table with all fields specified above
     private void updateMyDatabase(SQLiteDatabase db, int oldVersion, int newVersion){
         if(oldVersion < 1){
             db.execSQL("CREATE TABLE DRINK (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -113,6 +116,8 @@ public class ThirstMateDBHelper extends SQLiteOpenHelper {
                     "USER_ENTERED NUMERIC) ;"
             );
 
+            //native thristmate drinks added to database
+            //userEntered flag is set to false by default
             insertDrink(db,"Rum and Coke",R.drawable.rum_coke,"Rum",45.0,"Coke",
                     90.0,"Ice",0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
