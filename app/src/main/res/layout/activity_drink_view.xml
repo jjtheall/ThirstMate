@@ -36,8 +36,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/name"
             android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
             android:text="hello"
-            android:textSize="21dp"/>
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-black"
+            android:textSize="23dp"/>
 
 
         <LinearLayout
@@ -51,16 +54,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:padding="3dp"
+                android:textSize="18dp"
+                android:textColor="@color/black"
                 android:text="@string/drink_view_ingredient_label"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:padding="3dp"
+                android:textSize="18dp"
+                android:textColor="@color/black"
                 android:text="@string/drink_view_ingredient_amt_label"/>
 
         </LinearLayout>

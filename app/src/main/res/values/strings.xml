@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Thirst Mate</string>
-    <string name="splash_text">Please drink responsibly. If you are in the US, by pressing the button below, you are confirming that you are at least 21 years of age.</string>
+    <string name="splash_text">Please drink responsibly.</string>
+    <string name="splash_text2">Landlubbers beware! If ye be sailing the American seas, ye best have 21 years of experience...</string>
     <string name="splash_button">I am 21+</string>
     <string name="add_ingredient_button">ADD</string>
     <string name="delete_ingredient">X</string>
@@ -50,8 +51,8 @@
     <string name="about_us">About Thirst Mate</string>
     <string name="featured_label">Featured Drinks</string>
     <string name="shopping_label">Shopping List</string>
-    <string name="drink_view_ingredient_label">Ingredients</string>
-    <string name="drink_view_ingredient_amt_label">Ingredient Amounts</string>
+    <string name="drink_view_ingredient_label">Ingredient</string>
+    <string name="drink_view_ingredient_amt_label">Quantity (ml)</string>
     <string-array name="liquors">
         <item>Brandy</item>
         <item>Dark Rum</item>
@@ -117,5 +118,7 @@
     </string-array>
     <string name="clear_user_drinks">CLEAR ALL USER CREATED DRINKS</string>
     <string name="create_instructions">If your ingredient is a garnish/bitters/fruit/ice/etc, leave the quantity field blank</string>
+    <string name="ahoy">Ahoy, Matey!</string>
+    <string name="database_text">Database Settings</string>
 
 </resources>
