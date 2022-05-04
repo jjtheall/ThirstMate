@@ -49,22 +49,18 @@ public class AddIngredientDialog extends DialogFragment {
                         if(!text1String.equals("")){
                             if(!text2String.equals("")) {
                                 try{
-
                                     boolean newIngredient = true;
                                     for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
-                                        Log.d("List", "" + ShoppingListFragment.ingredientsShopping.get(i).getName());
                                         if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(text1String)){
-                                            Log.d("Exists", "" + text1String);
-                                            double temp = ShoppingListFragment.ingredientsShopping.get(i).getQuantity();
-                                            Log.d("IngQuant", "" + Double.parseDouble(text2String));
-                                            ShoppingListFragment.ingredientsShopping.get(i).setQuantity(temp + Double.parseDouble(text2String));
                                             newIngredient = false;
+                                            Toast toast = Toast.makeText(getActivity(), "Ingredient already in list", Toast.LENGTH_SHORT);
+                                            toast.show();
                                         }
                                     }
-                                    if(newIngredient){
-                                        Log.d("Doesn't", "" + text1String);
-                                        ShoppingListFragment.ingredientsShopping.add(new Ingredient(text1String, Double.parseDouble(text2String))); }
-                                    ShoppingListFragment.updateIngredients(ingredients, adapter);
+                                    if(newIngredient) {
+                                        ShoppingListFragment.ingredientsShopping.add(new Ingredient(text1String, Double.parseDouble(text2String)));
+                                        ShoppingListFragment.updateIngredients(ingredients, adapter);
+                                    }
                                     text2.setText("");
                                 } catch (NumberFormatException e){
                                     Toast toast = Toast.makeText(getActivity(), "Ingredient quantity must be a number", Toast.LENGTH_SHORT);
