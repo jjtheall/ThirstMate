@@ -47,11 +47,21 @@
         android:text="@string/theme_button"
         android:onClick="onThemeTestClick"/>
 
+    <TextView
+        android:id="@+id/databaseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="12dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:text="@string/database_text" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
         android:text="@string/clear_user_drinks"
         android:backgroundTint="@color/red_light"
         android:onClick="onClearUserDrinks"/>
