@@ -14,10 +14,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/create_drink_title"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/black"
         android:text="@string/create_drink"
-        android:textSize="36dp"/>
+        android:textSize="34dp"/>
 
     <TextView
         android:layout_width="wrap_content"
