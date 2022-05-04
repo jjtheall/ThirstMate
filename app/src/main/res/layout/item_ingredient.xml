@@ -17,19 +17,21 @@
             android:id="@+id/ingredientName"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:layout_gravity="center_vertical"
             android:layout_height="wrap_content"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/ingredientQuantity"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textSize="24sp" />
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/deleteIngredient"
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:text="@string/delete_ingredient"
             android:layout_gravity="center_vertical"/>
