@@ -1,3 +1,9 @@
+/*
+ * ThirstMate App
+ * @author: Jack Theall, MacArthur Mills
+ * Developed Spring '22
+ */
+
 package edu.quinnipiac.ser210.thirstmate;
 
 import android.content.ContentValues;
@@ -143,8 +149,64 @@ public class CreateDrinkFragment extends Fragment {
         Button createButton = (Button)view.findViewById(R.id.create_drink_button);
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
+            //when create drink button is pressed, check to make sure all quantity
+            //fields have numerical values, if so, execute CreateDrink async task
             public void onClick(View view) {
-                new CreateDrinkTask().execute();
+                boolean formatted = true;
+                try{
+                    if(!(ing1amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing1amtEditText.getText().toString());
+                    }
+                    if(!(ing2amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing2amtEditText.getText().toString());
+                    }
+                    if(!(ing3amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing3amtEditText.getText().toString());
+                    }
+                    if(!(ing4amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing4amtEditText.getText().toString());
+                    }
+                    if(!(ing5amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing5amtEditText.getText().toString());
+                    }
+                    if(!(ing6amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing6amtEditText.getText().toString());
+                    }
+                    if(!(ing7amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing7amtEditText.getText().toString());
+                    }
+                    if(!(ing8amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing8amtEditText.getText().toString());
+                    }
+                    if(!(ing9amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing9amtEditText.getText().toString());
+                    }
+                    if(!(ing10amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing10amtEditText.getText().toString());
+                    }
+                    if(!(ing11amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing11amtEditText.getText().toString());
+                    }
+                    if(!(ing12amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing12amtEditText.getText().toString());
+                    }
+                    if(!(ing13amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing13amtEditText.getText().toString());
+                    }
+                    if(!(ing14amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing14amtEditText.getText().toString());
+                    }
+                    if(!(ing15amtEditText.getText().toString().equals(""))){
+                        Double.parseDouble(ing15amtEditText.getText().toString());
+                    }
+                } catch (NumberFormatException e){
+                    formatted = false;
+                    Toast toast = Toast.makeText(getActivity(),"Quantity must be a number",Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+                if(formatted){
+                    new CreateDrinkTask().execute();
+                }
             }
         });
 
@@ -153,6 +215,8 @@ public class CreateDrinkFragment extends Fragment {
 
     private class CreateDrinkTask extends AsyncTask<Integer,Void,Boolean> {
 
+        //populate ingredient name and quantities from edit texts, then insert
+        //new record using those values into database
         @Override
         protected Boolean doInBackground(Integer... integers) {
             String drinkName = null;
@@ -303,6 +367,7 @@ public class CreateDrinkFragment extends Fragment {
                 Toast toast = Toast.makeText(getActivity(),"Database unavailable",Toast.LENGTH_SHORT);
                 toast.show();
             } else {
+                //update list of drinks in MainActivity, then switch page to drinks list
                 MainActivity mainActivity = (MainActivity)getActivity();
                 mainActivity.updateDrinks();
                 ViewPager pager = mainActivity.getPager();
