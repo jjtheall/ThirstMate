@@ -7,6 +7,10 @@ import androidx.core.view.MenuItemCompat;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -14,9 +18,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class SettingsActivity extends AppCompatActivity {
-    private ShareActionProvider shareActionProvider;
+    //private ShareActionProvider shareActionProvider;
     private Spinner themeColor;
 
     @Override
@@ -36,13 +41,17 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         // Inflate the menu; this adds items to the app bar
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_settings,menu);
+        /*
         MenuItem menuItem = menu.findItem(R.id.action_share);
         shareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
         setShareActionIntent("ingredients list");
+
+         */
         return super.onCreateOptionsMenu(menu);
     }
 
+    /*
     //change this method to accept list of ingredients
     public void setShareActionIntent(String text){
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -50,6 +59,8 @@ public class SettingsActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_TEXT,text);
         shareActionProvider.setShareIntent(intent);
     }
+
+     */
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
@@ -62,10 +73,6 @@ public class SettingsActivity extends AppCompatActivity {
                 Intent homeIntent = new Intent(this,MainActivity.class);
                 startActivity(homeIntent);
                 return true;
-            case R.id.action_settings:
-                Intent settingsIntent = new Intent(this,SettingsActivity.class);
-                startActivity(settingsIntent);
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -77,4 +84,33 @@ public class SettingsActivity extends AppCompatActivity {
         this.startActivity(new Intent(this, this.getClass()));
     }
 
+    public void onClearUserDrinks(View view) {
+        new ClearDrinksTask().execute();
+        Toast toast = Toast.makeText(this,"User drinks have been cleared",Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+    private class ClearDrinksTask extends AsyncTask<Integer,Void,Boolean>{
+
+        @Override
+        protected Boolean doInBackground(Integer... integers) {
+            SQLiteOpenHelper thirstMateDBHelper = new ThirstMateDBHelper(SettingsActivity.this);
+            try{
+                SQLiteDatabase db = thirstMateDBHelper.getWritableDatabase();
+                db.execSQL("DELETE FROM DRINK WHERE USER_ENTERED = TRUE;");
+                db.close();
+                return true;
+            } catch (SQLException e){
+                return false;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(Boolean success){
+            if(!success){
+                Toast toast = Toast.makeText(SettingsActivity.this,"Database unavailable",Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        }
+    }
 }

@@ -352,6 +352,7 @@ public class CreateDrinkFragment extends Fragment {
             drinkValues.put("ING14AMT",ing14amt);
             drinkValues.put("ING15",ing15);
             drinkValues.put("ING15AMT",ing15amt);
+            drinkValues.put("USER_ENTERED",true);
             db.insert("DRINK",null,drinkValues);
         }
     }

@@ -30,7 +30,7 @@ public class ThirstMateDBHelper extends SQLiteOpenHelper {
                                     double ing7amt, String ing8, double ing8amt, String ing9, double ing9amt,
                                     String ing10, double ing10amt, String ing11, double ing11amt, String ing12,
                                     double ing12amt, String ing13, double ing13amt, String ing14, double ing14amt,
-                                    String ing15, double ing15amt){
+                                    String ing15, double ing15amt, boolean userEntered){
 
         ContentValues drinkValues = new ContentValues();
         drinkValues.put("NAME",name);
@@ -65,6 +65,7 @@ public class ThirstMateDBHelper extends SQLiteOpenHelper {
         drinkValues.put("ING14AMT",ing14amt);
         drinkValues.put("ING15",ing15);
         drinkValues.put("ING15AMT",ing15amt);
+        drinkValues.put("USER_ENTERED",userEntered);
         db.insert("DRINK",null,drinkValues);
     }
 
@@ -102,41 +103,42 @@ public class ThirstMateDBHelper extends SQLiteOpenHelper {
                     "ING14 TEXT, " +
                     "ING14AMT REAL, " +
                     "ING15 TEXT, " +
-                    "ING15AMT REAL) ;"
+                    "ING15AMT REAL, " +
+                    "USER_ENTERED NUMERIC) ;"
             );
 
             insertDrink(db,"Rum and Coke",R.drawable.rum_coke,"Rum",45.0,"Coke",
                     90.0,"Ice",0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
                     0.0,null,0.0,null,0.0,null,0.0,
-                    null,0.0,null,0.0,null,0.0);
+                    null,0.0,null,0.0,null,0.0,false);
             insertDrink(db,"Blue Hawaiian",R.drawable.bluehawaiian,"Rum",30.0,
                     "Blue Curacao",15.0,"Coconut Cream",15.0,"Pineapple Juice",
                     60.0,"Ice",0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
                     0.0,null,0.0,null,0.0,null,0.0,
-                    null,0.0);
+                    null,0.0,false);
             insertDrink(db,"Vodka Cranberry",R.drawable.vodkacran,"Vodka",60.0,
                     "Cranberry Juice",90.0,"Ice",0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
                     0.0,null,0.0,null,0.0,null,0.0,
-                    null,0.0,null,0.0,null,0.0,null,0.0);
+                    null,0.0,null,0.0,null,0.0,null,0.0,false);
             insertDrink(db,"Bay Breeze",R.drawable.baybreeze,"Vodka",60.0,
                     "Cranberry Juice",90.0,"Pineapple Juice",90.0,"Ice",
                     0.0,null,0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
                     0.0,null,0.0,null,0.0,null,0.0,
-                    null,0.0);
+                    null,0.0,false);
             insertDrink(db,"Tequila Sunrise",R.drawable.teqsunrise,"Tequila",45.0,
                     "Orange Juice",90.0,"Grenadine",15.0,"Ice",0.0,
                     null,0.0,null,0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
-                    0.0,null,0.0,null,0.0,null,0.0);
+                    0.0,null,0.0,null,0.0,null,0.0,false);
             insertDrink(db,"Margarita",R.drawable.marg,"Tequila",35.0,"Cointreau",
                     20.0,"Lime Juice",15.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,0.0,
                     null,0.0,null,0.0,null,0.0,null,
-                    0.0,null,0.0,null,0.0);
+                    0.0,null,0.0,null,0.0,false);
 
         }
         if(oldVersion < 2){

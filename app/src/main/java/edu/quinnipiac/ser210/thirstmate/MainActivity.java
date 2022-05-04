@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(pager);
 
         //execute async task
+        drinks.clear();
         new FetchDrinksTask().execute();
 
         Intent intent = getIntent();

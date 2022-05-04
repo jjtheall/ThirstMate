@@ -115,5 +115,7 @@
         <item>White Creme de Menthe</item>
         <item>Yellow Chartreuse</item>
     </string-array>
+    <string name="clear_user_drinks">CLEAR ALL USER CREATED DRINKS</string>
+    <string name="create_instructions">If your ingredient is a garnish/bitters/fruit/ice/etc, leave the quantity field blank</string>
 
 </resources>
