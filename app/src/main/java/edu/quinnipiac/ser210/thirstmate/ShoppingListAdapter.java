@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,6 +18,8 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListVH>{
 
     List<Ingredient> ingredients;
     List<ShoppingListVH> holders = new LinkedList<>();
+    private List<String> liquorNames;
+    private List<String> liqueurNames;
 
     public ShoppingListAdapter(List<Ingredient> ingredients){
         this.ingredients = ingredients;
@@ -24,14 +28,44 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListVH>{
     @Override
     public ShoppingListVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_ingredient, parent, false);
+        liquorNames = new ArrayList<String>(Arrays.asList(view.getResources().getStringArray(R.array.liquors)));
+        liqueurNames = new ArrayList<String>(Arrays.asList(view.getResources().getStringArray(R.array.liqueurs)));
         return new ShoppingListVH(view).linkAdapter(this);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ShoppingListVH holder, int position) {
+        Ingredient cur = ingredients.get(position);
         holders.add(holder);
-        holder.nameText.setText(ingredients.get(position).getName());
-        if(ingredients.get(position).getQuantity() != 0){ holder.quantityText.setText("" + ingredients.get(position).getQuantity()); }
+        holder.nameText.setText(cur.getName());
+
+        // Checks if quantity is above 0
+        if(cur.getQuantity() != 0) {
+
+            // Checks if ingredient is base liquor
+            if (liquorNames.contains(cur.getName())) {
+                // Nips
+                if (cur.getQuantity() <= 250) {
+                    if(cur.getQuantity() <= 50){holder.quantityText.setText("1 Nip");}
+                    else{holder.quantityText.setText((int)Math.ceil(cur.getQuantity()/50) + " Nips");}
+                }
+                // Fifth
+                else if(cur.getQuantity() <= 750){ holder.quantityText.setText("1 Fifth");}
+                // Liter
+                else if(cur.getQuantity() <= 1000){ holder.quantityText.setText("1 Liter");}
+                // Handles
+                else if(cur.getQuantity() > 1000){
+                    if(cur.getQuantity() <= 1750){holder.quantityText.setText("1 Handle");}
+                    else{holder.quantityText.setText((int)Math.ceil(cur.getQuantity()/1750) + " Handles");}
+                }
+            } else if(liqueurNames.contains(cur.getName())){
+
+            }
+            else{
+                holder.quantityText.setText(cur.getQuantity() + "ml");
+            }
+        }
+
     }
 
     @Override
