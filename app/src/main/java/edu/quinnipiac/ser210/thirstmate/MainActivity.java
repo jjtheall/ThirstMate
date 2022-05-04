@@ -84,10 +84,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent infoIntent = new Intent(this,InfoActivity.class);
                 startActivity(infoIntent);
                 return true;
-            case R.id.action_home:
-                Intent homeIntent = new Intent(this,MainActivity.class);
-                startActivity(homeIntent);
-                return true;
             case R.id.action_settings:
                 Intent settingsIntent = new Intent(this,SettingsActivity.class);
                 startActivity(settingsIntent);
