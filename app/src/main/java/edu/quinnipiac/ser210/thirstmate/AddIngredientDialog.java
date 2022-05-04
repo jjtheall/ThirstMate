@@ -43,20 +43,36 @@ public class AddIngredientDialog extends DialogFragment {
                     public void onClick(DialogInterface dialog, int id) {
                         EditText text1 = (EditText) getDialog().findViewById(R.id.addIngredientName);
                         EditText text2 = (EditText) getDialog().findViewById(R.id.addIngredientQuantity);
+                        String text1String = text1.getText().toString();
+                        String text2String = text2.getText().toString();
 
-                        if(!text1.getText().toString().equals("")){
-                            if(!text2.getText().toString().equals("")) {
+                        if(!text1String.equals("")){
+                            if(!text2String.equals("")) {
                                 try{
-                                    Log.d("Huh", text2.getText().toString());
-                                ShoppingListFragment.ingredientsShopping.add(new Ingredient(text1.getText().toString(), Double.parseDouble(text2.getText().toString())));
-                                ShoppingListFragment.updateIngredients(ingredients, adapter);
-                                text2.setText("");
+
+                                    boolean newIngredient = true;
+                                    for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
+                                        Log.d("List", "" + ShoppingListFragment.ingredientsShopping.get(i).getName());
+                                        if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(text1String)){
+                                            Log.d("Exists", "" + text1String);
+                                            double temp = ShoppingListFragment.ingredientsShopping.get(i).getQuantity();
+                                            Log.d("IngQuant", "" + Double.parseDouble(text2String));
+                                            ShoppingListFragment.ingredientsShopping.get(i).setQuantity(temp + Double.parseDouble(text2String));
+                                            newIngredient = false;
+                                        }
+                                    }
+                                    if(newIngredient){
+                                        Log.d("Doesn't", "" + text1String);
+                                        ShoppingListFragment.ingredientsShopping.add(new Ingredient(text1String, Double.parseDouble(text2String))); }
+                                    ShoppingListFragment.updateIngredients(ingredients, adapter);
+                                    text2.setText("");
                                 } catch (NumberFormatException e){
                                     Toast toast = Toast.makeText(getActivity(), "Ingredient quantity must be a number", Toast.LENGTH_SHORT);
                                     toast.show();
                                 }
                             }
                             else{
+                                Log.d("No way", "How");
                                 ShoppingListFragment.ingredientsShopping.add(new Ingredient(text1.getText().toString()));
                                 ShoppingListFragment.updateIngredients(ingredients, adapter);
                             }

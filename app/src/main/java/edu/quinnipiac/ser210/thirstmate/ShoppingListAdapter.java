@@ -65,7 +65,9 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListVH>{
                     else{holder.quantityText.setText((int)Math.ceil(cur.getQuantity()/1750) + " Handles");}
                 }
             } else if(liqueurNames.contains(cur.getName())){
-
+                // Fifth
+                if(cur.getQuantity() <= 750){ holder.quantityText.setText("1 Fifth");}
+                else{holder.quantityText.setText((int)Math.ceil(cur.getQuantity()/750) + " Fifths");}
             }
             else{
                 holder.quantityText.setText(cur.getQuantity() + "ml");
