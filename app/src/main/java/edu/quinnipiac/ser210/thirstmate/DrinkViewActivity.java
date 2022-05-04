@@ -370,7 +370,7 @@ public class DrinkViewActivity extends AppCompatActivity {
         //current number of drinks must be greater than zero to add
         if(curNum > 0){
             if(!ing1Name.equals("")){
-                Ingredient ing1 = new Ingredient(ing1Name,curNum * ing1Amt);
+                Ingredient ing1 = new Ingredient(ing1Name,Math.round(curNum * ing1Amt));
                 //checks if we have seen this ingredient in the shopping list before
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
@@ -384,7 +384,7 @@ public class DrinkViewActivity extends AppCompatActivity {
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing1); }
             }
             if(!ing2Name.equals("")){
-                Ingredient ing2 = new Ingredient(ing2Name,curNum * ing2Amt);
+                Ingredient ing2 = new Ingredient(ing2Name,Math.round(curNum * ing2Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing2Name)){
@@ -397,7 +397,7 @@ public class DrinkViewActivity extends AppCompatActivity {
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing2); }
             }
             if(!ing3Name.equals("")){
-                Ingredient ing3 = new Ingredient(ing3Name,curNum * ing3Amt);
+                Ingredient ing3 = new Ingredient(ing3Name,Math.round(curNum * ing3Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing3Name)){
@@ -410,7 +410,7 @@ public class DrinkViewActivity extends AppCompatActivity {
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing3); }
             }
             if(!ing4Name.equals("")){
-                Ingredient ing4 = new Ingredient(ing4Name,curNum * ing4Amt);
+                Ingredient ing4 = new Ingredient(ing4Name,Math.round(curNum * ing4Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing4Name)){
@@ -423,7 +423,7 @@ public class DrinkViewActivity extends AppCompatActivity {
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing4); }
             }
             if(!ing5Name.equals("")){
-                Ingredient ing5 = new Ingredient(ing5Name,curNum * ing5Amt);
+                Ingredient ing5 = new Ingredient(ing5Name,Math.round(curNum * ing5Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing5Name)){
@@ -436,7 +436,7 @@ public class DrinkViewActivity extends AppCompatActivity {
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing5); }
             }
             if(!ing6Name.equals("")){
-                Ingredient ing6 = new Ingredient(ing6Name,curNum * ing6Amt);
+                Ingredient ing6 = new Ingredient(ing6Name,Math.round(curNum * ing6Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing6Name)){
@@ -449,7 +449,7 @@ public class DrinkViewActivity extends AppCompatActivity {
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing6); }
             }
             if(!ing7Name.equals("")){
-                Ingredient ing7 = new Ingredient(ing7Name,curNum * ing7Amt);
+                Ingredient ing7 = new Ingredient(ing7Name,Math.round(curNum * ing7Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing7Name)){
@@ -461,7 +461,7 @@ public class DrinkViewActivity extends AppCompatActivity {
 
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing7); }            }
             if(!ing8Name.equals("")){
-                Ingredient ing8 = new Ingredient(ing8Name,curNum * ing8Amt);
+                Ingredient ing8 = new Ingredient(ing8Name,Math.round(curNum * ing8Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing8Name)){
@@ -473,7 +473,7 @@ public class DrinkViewActivity extends AppCompatActivity {
 
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing8); }            }
             if(!ing9Name.equals("")){
-                Ingredient ing9 = new Ingredient(ing9Name,curNum * ing9Amt);
+                Ingredient ing9 = new Ingredient(ing9Name,Math.round(curNum * ing9Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing9Name)){
@@ -486,7 +486,7 @@ public class DrinkViewActivity extends AppCompatActivity {
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing9); }
             }
             if(!ing10Name.equals("")){
-                Ingredient ing10 = new Ingredient(ing10Name,curNum * ing10Amt);
+                Ingredient ing10 = new Ingredient(ing10Name,Math.round(curNum * ing10Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing10Name)){
@@ -498,7 +498,7 @@ public class DrinkViewActivity extends AppCompatActivity {
 
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing10); }            }
             if(!ing11Name.equals("")){
-                Ingredient ing11 = new Ingredient(ing11Name,curNum * ing11Amt);
+                Ingredient ing11 = new Ingredient(ing11Name,Math.round(curNum * ing11Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing11Name)){
@@ -511,7 +511,7 @@ public class DrinkViewActivity extends AppCompatActivity {
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing11); }
             }
             if(!ing12Name.equals("")){
-                Ingredient ing12 = new Ingredient(ing12Name,curNum * ing12Amt);
+                Ingredient ing12 = new Ingredient(ing12Name,Math.round(curNum * ing12Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing12Name)){
@@ -524,7 +524,7 @@ public class DrinkViewActivity extends AppCompatActivity {
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing12); }
             }
             if(!ing13Name.equals("")){
-                Ingredient ing13 = new Ingredient(ing13Name,curNum * ing13Amt);
+                Ingredient ing13 = new Ingredient(ing13Name,Math.round(curNum * ing13Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing13Name)){
@@ -537,7 +537,7 @@ public class DrinkViewActivity extends AppCompatActivity {
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing13); }
             }
             if(!ing14Name.equals("")){
-                Ingredient ing14 = new Ingredient(ing14Name,curNum * ing14Amt);
+                Ingredient ing14 = new Ingredient(ing14Name,Math.round(curNum * ing14Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing14Name)){
@@ -550,7 +550,7 @@ public class DrinkViewActivity extends AppCompatActivity {
                 if(newIngredient){ShoppingListFragment.ingredientsShopping.add(ing14); }
             }
             if(!ing15Name.equals("")){
-                Ingredient ing15 = new Ingredient(ing15Name,curNum * ing15Amt);
+                Ingredient ing15 = new Ingredient(ing15Name,Math.round(curNum * ing15Amt));
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing15Name)){
