@@ -23,8 +23,7 @@ import android.widget.Toast;
 
 public class DrinkViewActivity extends AppCompatActivity {
 
-    //private ShareActionProvider shareActionProvider;
-
+    //keeps track of current number of drinks user has incremented
     private int curNum = 0;
 
     public static final String EXTRA_DRINKNAME = "drinkID";
@@ -76,6 +75,7 @@ public class DrinkViewActivity extends AppCompatActivity {
         androidx.appcompat.widget.Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //populating data from intent
         Intent intent = getIntent();
         drinkName = intent.getStringExtra(EXTRA_DRINKNAME);
         TextView drinkNameTextView = (TextView) findViewById(R.id.name);
@@ -87,6 +87,7 @@ public class DrinkViewActivity extends AppCompatActivity {
         photo.setImageResource(photoId);
         photo.setContentDescription(drinkName);
 
+        //populating ingredients, as long as they are not null
         if(intent.getStringExtra(EXTRA_INGNAME + "0") != null){
             ing1Name = intent.getStringExtra(EXTRA_INGNAME + "0");
         }
@@ -194,6 +195,8 @@ public class DrinkViewActivity extends AppCompatActivity {
         TextView ing15TextView = (TextView)findViewById(R.id.ing15);
         TextView ing15AmtTextView = (TextView)findViewById(R.id.ingamt15);
 
+        //setting each ingredient name and quantity text view to visibile
+        //if there is data for that no. ingredient
         if(!ing1Name.equals("")){
             ing1TextView.setText(ing1Name);
             ing1AmtTextView.setText(""+ing1Amt);
@@ -320,25 +323,8 @@ public class DrinkViewActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         // Inflate the menu; this adds items to the app bar
         getMenuInflater().inflate(R.menu.menu_drink_view,menu);
-        /*
-        MenuItem menuItem = menu.findItem(R.id.action_share);
-        shareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
-        setShareActionIntent("ingredients list");
-
-         */
         return super.onCreateOptionsMenu(menu);
     }
-
-    /*
-    //change this method to accept list of ingredients
-    public void setShareActionIntent(String text){
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_TEXT,text);
-        shareActionProvider.setShareIntent(intent);
-    }
-
-     */
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
@@ -360,6 +346,7 @@ public class DrinkViewActivity extends AppCompatActivity {
         }
     }
 
+    //decrement amount of drinks selected
     public void onSubtractDrinkQuantity(View view){
         TextView drinkQuantity = (TextView) findViewById(R.id.drink_quantity);
         curNum = Integer.parseInt(String.valueOf(drinkQuantity.getText()));
@@ -370,6 +357,7 @@ public class DrinkViewActivity extends AppCompatActivity {
 
     }
 
+    //increment amount of drinks selected
     public void onAddDrinkQuantity(View view) {
         TextView drinkQuantity = (TextView) findViewById(R.id.drink_quantity);
         curNum = Integer.parseInt(String.valueOf(drinkQuantity.getText()));
@@ -377,10 +365,13 @@ public class DrinkViewActivity extends AppCompatActivity {
         curNum++;
     }
 
+    //for each ingredient in the drink, as long as the name is not empty, add each ingredient to the shopping list
     public void onAddIngredients(View view){
+        //current number of drinks must be greater than zero to add
         if(curNum > 0){
             if(!ing1Name.equals("")){
                 Ingredient ing1 = new Ingredient(ing1Name,curNum * ing1Amt);
+                //checks if we have seen this ingredient in the shopping list before
                 boolean newIngredient = true;
                 for(int i = 0; i < ShoppingListFragment.ingredientsShopping.size(); i++){
                     if(ShoppingListFragment.ingredientsShopping.get(i).getName().equals(ing1Name)){
@@ -574,6 +565,7 @@ public class DrinkViewActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Ingredients for " + drinkName + " were added to your shopping list",Toast.LENGTH_SHORT);
             toast.show();
 
+            //go back to DrinkListFragment
             Intent intent = new Intent(this,MainActivity.class);
             intent.putExtra("tabKey",1);
             startActivity(intent);

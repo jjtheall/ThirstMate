@@ -27,7 +27,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class SettingsActivity extends AppCompatActivity {
-    //private ShareActionProvider shareActionProvider;
     private Spinner themeColor;
 
     @Override
@@ -48,25 +47,8 @@ public class SettingsActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         // Inflate the menu; this adds items to the app bar
         getMenuInflater().inflate(R.menu.menu_settings,menu);
-        /*
-        MenuItem menuItem = menu.findItem(R.id.action_share);
-        shareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
-        setShareActionIntent("ingredients list");
-
-         */
         return super.onCreateOptionsMenu(menu);
     }
-
-    /*
-    //change this method to accept list of ingredients
-    public void setShareActionIntent(String text){
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_TEXT,text);
-        shareActionProvider.setShareIntent(intent);
-    }
-
-     */
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
@@ -84,12 +66,14 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
+    //changes theme color to selected value of spinner
     public void onThemeTestClick(View view){
         themeUtils.changeToTheme(String.valueOf(themeColor.getSelectedItem()));
         this.finish();
         this.startActivity(new Intent(this, this.getClass()));
     }
 
+    //calls clearDrinksTask async task
     public void onClearUserDrinks(View view) {
         new ClearDrinksTask().execute();
         Toast toast = Toast.makeText(this,"User drinks have been cleared",Toast.LENGTH_SHORT);
@@ -98,6 +82,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private class ClearDrinksTask extends AsyncTask<Integer,Void,Boolean>{
 
+        //drops all records from drink table where user_entered flag is set to true
         @Override
         protected Boolean doInBackground(Integer... integers) {
             SQLiteOpenHelper thirstMateDBHelper = new ThirstMateDBHelper(SettingsActivity.this);

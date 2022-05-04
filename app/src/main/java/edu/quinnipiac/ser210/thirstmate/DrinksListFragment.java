@@ -45,13 +45,12 @@ public class DrinksListFragment extends Fragment implements DrinksVH.OnDrinkList
     private int counter = 0;
 
     List<Drink> drinks = new LinkedList<>();
-    private SQLiteDatabase db;
-    private Cursor cursor;
 
     public DrinksListFragment() {
         // Required empty public constructor
     }
 
+    //passes list of drinks to drinks instance var
     public DrinksListFragment(List<Drink> drinks){
         this.drinks = drinks;
     }
@@ -99,6 +98,8 @@ public class DrinksListFragment extends Fragment implements DrinksVH.OnDrinkList
         return view;
     }
 
+    //when a drink is clicked in the list, populate intent with name, image resource id
+    //and ingredient list as extras, then start DrinkViewActivity
     @Override
     public void onDrinkClicked(int pos) {
         Intent intent = new Intent(getActivity(),DrinkViewActivity.class);

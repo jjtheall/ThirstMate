@@ -90,6 +90,7 @@ public class ShoppingListFragment extends Fragment {
         ShoppingListAdapter adapter = new ShoppingListAdapter(ingredients);
         recyclerView.setAdapter(adapter);
 
+        //adds ingredients in shopping list to list of instance var list of ingredients
         for(int i=0; i<ingredientsShopping.size();i++){
             ingredients.add(ingredientsShopping.get(i));
             adapter.notifyItemInserted(ingredients.size() - 1);
@@ -97,7 +98,9 @@ public class ShoppingListFragment extends Fragment {
 
         counter = ingredientsShopping.size();
 
+        //setting onClickListener for add and clear buttons in shopping list
         view.findViewById(R.id.addIngredient).setOnClickListener(view1 -> {
+            //creates AddIngredientDialog
             AddIngredientDialog addIngredientDialog = new AddIngredientDialog();
             addIngredientDialog.setIngredients(ingredients);
             addIngredientDialog.setAdapter(adapter);
@@ -116,6 +119,7 @@ public class ShoppingListFragment extends Fragment {
         return view;
     }
 
+    //updates instance ingredient list
     public static void updateIngredients(List<Ingredient> ingredients, ShoppingListAdapter adapter){
         if(ingredientsShopping.size() != 0) {
             ingredients.add(ingredientsShopping.get(counter % ingredientsShopping.size()));

@@ -81,6 +81,7 @@ public class HomepageFragment extends Fragment implements DrinksVH.OnDrinkListen
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
+        //randomly selects drinks from list populated from database
         for (int i = 0; i < numberOfFeatured; i++) {
             randomIndex = rand.nextInt(drinksBetter.size());
             featuredDrinks.add(drinksBetter.get(randomIndex));
@@ -103,6 +104,7 @@ public class HomepageFragment extends Fragment implements DrinksVH.OnDrinkListen
         return view;
     }
 
+    //exact same logic as when drink is clicked in DrinksListFragment
     @Override
     public void onDrinkClicked(int pos) {
         Intent intent = new Intent(getActivity(),DrinkViewActivity.class);
