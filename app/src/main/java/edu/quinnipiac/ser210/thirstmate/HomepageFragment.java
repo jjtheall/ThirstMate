@@ -45,7 +45,6 @@ public class HomepageFragment extends Fragment implements DrinksVH.OnDrinkListen
 
     public HomepageFragment(List<Drink> drinks){
         for(int i = 0; i < drinks.size(); i++){
-            Log.d("How many", "" + i);
             drinksBetter.add(drinks.get(i));
         }
     }
@@ -77,7 +76,6 @@ public class HomepageFragment extends Fragment implements DrinksVH.OnDrinkListen
         }
 
         for (int i = 0; i < numberOfFeatured; i++) {
-            Log.d("How", "" + drinksBetter.size());
             randomIndex = rand.nextInt(drinksBetter.size());
             featuredDrinks.add(drinksBetter.get(randomIndex));
             drinksBetter.remove(randomIndex);
