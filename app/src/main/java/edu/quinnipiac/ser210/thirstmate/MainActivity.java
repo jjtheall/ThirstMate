@@ -16,6 +16,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -69,11 +70,18 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    //TODO: change this method to accept list of ingredients
     public void setShareActionIntent(String text){
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_TEXT,text);
+
+        String ingredientString = "";
+
+        for(int i=0; i<ShoppingListFragment.ingredientsShopping.size(); i++){
+            Ingredient curIng = ShoppingListFragment.ingredientsShopping.get(i);
+            ingredientString = ingredientString + curIng.getName() + " - " + curIng.getQuantity() + "\n";
+        }
+
+        intent.putExtra(Intent.EXTRA_TEXT,ingredientString);
         shareActionProvider.setShareIntent(intent);
     }
 
@@ -87,6 +95,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_settings:
                 Intent settingsIntent = new Intent(this,SettingsActivity.class);
                 startActivity(settingsIntent);
+                return true;
+            case R.id.action_share:
+                setShareActionIntent("");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
