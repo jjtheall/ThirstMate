@@ -3,6 +3,7 @@ package edu.quinnipiac.ser210.thirstmate;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,6 +63,7 @@ class ShoppingListVH extends RecyclerView.ViewHolder{
         itemView.findViewById(R.id.deleteIngredient).setOnClickListener(view -> {
             nameText.setText("");
             quantityText.setText("");
+            ShoppingListFragment.ingredientsShopping.remove(getAdapterPosition());
             adapter.ingredients.remove(getAdapterPosition());
             adapter.notifyItemRemoved(getAdapterPosition());
         });
