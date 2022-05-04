@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 
 public class InfoActivity extends AppCompatActivity {
-    private ShareActionProvider shareActionProvider;
+    //private ShareActionProvider shareActionProvider;
     private ImageView nipBottle;
     private ImageView fifthBottle;
     private ImageView literBottle;
@@ -44,13 +44,17 @@ public class InfoActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         // Inflate the menu; this adds items to the app bar
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_info,menu);
+        /*
         MenuItem menuItem = menu.findItem(R.id.action_share);
         shareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
         setShareActionIntent("ingredients list");
+
+         */
         return super.onCreateOptionsMenu(menu);
     }
 
+    /*
     //change this method to accept list of ingredients
     public void setShareActionIntent(String text){
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -59,13 +63,11 @@ public class InfoActivity extends AppCompatActivity {
         shareActionProvider.setShareIntent(intent);
     }
 
+     */
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch(item.getItemId()){
-            case R.id.action_info:
-                Intent infoIntent = new Intent(this,InfoActivity.class);
-                startActivity(infoIntent);
-                return true;
             case R.id.action_home:
                 Intent homeIntent = new Intent(this,MainActivity.class);
                 startActivity(homeIntent);

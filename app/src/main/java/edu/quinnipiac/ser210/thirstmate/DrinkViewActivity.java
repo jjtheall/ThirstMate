@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class DrinkViewActivity extends AppCompatActivity {
 
-    private ShareActionProvider shareActionProvider;
+    //private ShareActionProvider shareActionProvider;
 
     private int curNum = 0;
 
@@ -282,13 +282,17 @@ public class DrinkViewActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         // Inflate the menu; this adds items to the app bar
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_drink_view,menu);
+        /*
         MenuItem menuItem = menu.findItem(R.id.action_share);
         shareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
         setShareActionIntent("ingredients list");
+
+         */
         return super.onCreateOptionsMenu(menu);
     }
 
+    /*
     //change this method to accept list of ingredients
     public void setShareActionIntent(String text){
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -296,6 +300,8 @@ public class DrinkViewActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_TEXT,text);
         shareActionProvider.setShareIntent(intent);
     }
+
+     */
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
