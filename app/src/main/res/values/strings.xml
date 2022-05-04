@@ -52,4 +52,68 @@
     <string name="shopping_label">Shopping List</string>
     <string name="drink_view_ingredient_label">Ingredients</string>
     <string name="drink_view_ingredient_amt_label">Ingredient Amounts</string>
+    <string-array name="liquors">
+        <item>Brandy</item>
+        <item>Dark Rum</item>
+        <item>Gin</item>
+        <item>Gold Rum</item>
+        <item>Rum</item>
+        <item>Scotch</item>
+        <item>Tequila</item>
+        <item>Vodka</item>
+        <item>Whiskey</item>
+        <item>White Rum</item>
+    </string-array>
+    <string-array name="liqueurs">
+        <item>Absinthe</item>
+        <item>Amaretto</item>
+        <item>Aperol</item>
+        <item>Baileys</item>
+        <item>Banana Liqueur</item>
+        <item>Benedictine D.O.M.</item>
+        <item>Blackberry Liqueur</item>
+        <item>Blue Curacao</item>
+        <item>Campari</item>
+        <item>Chambord</item>
+        <item>Cherry Liqueur</item>
+        <item>Cherry Heering</item>
+        <item>Coffee Liqueur</item>
+        <item>Cointreau</item>
+        <item>Creme Yvette</item>
+        <item>Creme de Cassis</item>
+        <item>Cynar</item>
+        <item>Dark Creme de Cacao</item>
+        <item>Disaronno</item>
+        <item>Drambuie</item>
+        <item>Fernet</item>
+        <item>Fernet Branca</item>
+        <item>Frangelico</item>
+        <item>Galliano</item>
+        <item>Grand Marnier</item>
+        <item>Green Chartreuse</item>
+        <item>Green Creme de Menthe</item>
+        <item>Irish Mist</item>
+        <item>Kahlua</item>
+        <item>Luxardo Maraschino Liqueur</item>
+        <item>Malibu</item>
+        <item>Maraschino Liqueur</item>
+        <item>Midori</item>
+        <item>Orange Curacao</item>
+        <item>Peach Schnapps</item>
+        <item>Picon</item>
+        <item>Pierre Ferrand Dry Curacao</item>
+        <item>Plymouth Sloe gin</item>
+        <item>Punt e Mes</item>
+        <item>Raspberry Liqueur</item>
+        <item>Sloe Gin</item>
+        <item>Southern Comfort</item>
+        <item>St Germain</item>
+        <item>Strega</item>
+        <item>Suze</item>
+        <item>Triple Sec</item>
+        <item>White Creme de Cacao</item>
+        <item>White Creme de Menthe</item>
+        <item>Yellow Chartreuse</item>
+    </string-array>
+
 </resources>
