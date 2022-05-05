@@ -23,6 +23,7 @@ public class SplashActivityTest {
     @Test
     public void onSplashButtonPressed() {
         onView(withText("I am 21+")).perform(click());
+        //check on the next view that some component exists
         onView(withClassName(R.class.getClass())).check()
     }
 }
