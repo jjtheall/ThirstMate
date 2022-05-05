@@ -2,6 +2,7 @@ package edu.quinnipiac.ser210.thirstmate;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
@@ -24,6 +25,6 @@ public class SplashActivityTest {
     public void onSplashButtonPressed() {
         onView(withText("I am 21+")).perform(click());
         //check on the next view that some component exists
-        onView(withClassName(R.class.getClass())).check()
+        onView(withId(R.id.ahoy)).check(matches(withText("Ahoy, Matey!")));
     }
 }
